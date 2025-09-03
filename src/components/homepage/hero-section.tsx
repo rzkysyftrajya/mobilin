@@ -30,7 +30,7 @@ export default function HeroSection({
   return (
     <section className="relative h-[80vh] min-h-[500px] flex items-center text-white overflow-hidden">
       <Image
-        src="/hero-section.png"
+        src="/hero-section.webp"
         alt="Jalanan perkotaan yang sibuk dengan mobil"
         data-ai-hint="scenic road car"
         fill
