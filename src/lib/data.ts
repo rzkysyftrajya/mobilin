@@ -495,37 +495,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "jakarta",
     province: "jakarta",
     name: "Panduan Wisata & Bisnis Jakarta",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Jakarta",
+    heroImage: "/destinasi/jakarta/Jakarta Sunset - Sudirman.png",
     "data-ai-hint": "jakarta skyline",
     short_description:
       "Jelajahi dinamika ibu kota, dari gedung pencakar langit, pusat perbelanjaan mewah, hingga kota tua yang bersejarah.",
     destinations: [
       {
         name: "Kota Tua & Pelabuhan Sunda Kelapa",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Kota+Tua",
+        image: "/destinasi/jakarta/kota-tua.png",
         "data-ai-hint": "kota tua jakarta",
         description:
           "Kembali ke masa lalu di pusat Batavia. Kunjungi Museum Fatahillah dan lihat kapal-kapal Pinisi yang megah di pelabuhan kuno.",
       },
       {
         name: "Monas & Museum Nasional",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Monas",
+        image: "/destinasi/jakarta/monas.png",
         "data-ai-hint": "monas monument",
         description:
           "Ikon kebanggaan Indonesia. Naik ke puncak Monas untuk pemandangan kota dan pelajari sejarah bangsa di Museum Nasional di dekatnya.",
       },
       {
         name: "Ancol & Dunia Fantasi",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Dufan",
+        image: "/destinasi/jakarta/ancol.png",
         "data-ai-hint": "ancol dufan",
         description:
           "Pusat hiburan tepi pantai untuk semua usia. Nikmati wahana seru di Dufan, bersantai di pantai, atau kunjungi Sea World.",
       },
       {
         name: "Pusat Perbelanjaan & Kuliner",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Pusat+Perbelanjaan",
+        image: "/destinasi/jakarta/senayan.png",
         "data-ai-hint": "shopping mall interior",
         description:
           "Dari Grand Indonesia hingga Senayan City, nikmati pengalaman belanja kelas dunia dan cicipi ragam kuliner dari food court hingga fine dining.",
@@ -536,36 +534,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "bandung",
     province: "jawa-barat",
     name: "Panduan Wisata Bandung",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Bandung",
+    heroImage: "/destinasi/bandung/bandung.png",
     "data-ai-hint": "bandung tea plantation",
     short_description:
       "Temukan kesejukan dan kreativitas di Paris van Java, dari kawah vulkanik hingga factory outlet yang menggoda.",
     destinations: [
       {
         name: "Kawah Putih & Situ Patenggang",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Kawah+Putih",
+        image: "/destinasi/bandung/kawah-putih.png",
         "data-ai-hint": "kawah putih",
         description:
           "Kunjungi danau kawah vulkanik yang sureal dengan air berwarna putih kehijauan, lalu bersantai di tepi danau Situ Patenggang.",
       },
       {
         name: "Lembang & Farmhouse",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Lembang",
+        image: "/destinasi/bandung/lembang.png",
         "data-ai-hint": "lembang farmhouse",
         description:
           "Area sejuk di utara Bandung. Kunjungi Farmhouse dengan suasana Eropanya, De Ranch, atau Floating Market yang unik.",
       },
       {
         name: "Jalan Braga & Gedung Sate",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Jalan+Braga",
+        image: "/destinasi/bandung/braga.png",
         "data-ai-hint": "braga street",
         description:
           "Susuri Jalan Braga yang historis dengan bangunan art deco-nya, dan jangan lupa berfoto di depan Gedung Sate yang ikonik.",
       },
       {
         name: "Factory Outlet & Distro",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Factory+Outlet",
+        image: "/destinasi/bandung/factory.png",
         "data-ai-hint": "fashion store",
         description:
           "Surga belanja! Jelajahi area Jalan Riau atau Dago untuk menemukan berbagai factory outlet dan distro dengan fashion terkini.",
@@ -576,38 +573,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "surabaya",
     province: "jawa-timur",
     name: "Panduan Wisata Surabaya",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Surabaya",
+    heroImage: "/destinasi/surabaya/surabaya.png",
     "data-ai-hint": "surabaya suramadu",
     short_description:
       "Jelajahi Kota Pahlawan, dari monumen bersejarah, jembatan megah, hingga kuliner rawon yang khas.",
     destinations: [
       {
         name: "Jembatan Suramadu",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Jembatan+Suramadu",
+        image: "/destinasi/surabaya/suramadu.png",
         "data-ai-hint": "suramadu bridge night",
         description:
           "Lintasi jembatan terpanjang di Indonesia yang menghubungkan Surabaya dengan Pulau Madura. Pemandangannya indah terutama di malam hari.",
       },
       {
         name: "Tugu Pahlawan & Museum 10 Nopember",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Tugu+Pahlawan",
+        image: "/destinasi/surabaya/tugu-pahlawan.png",
         "data-ai-hint": "tugu pahlawan",
         description:
           "Kenang kembali semangat perjuangan arek-arek Suroboyo di monumen ikonik ini dan pelajari detailnya di museum bawah tanah.",
       },
       {
         name: "House of Sampoerna",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=House+of+Sampoerna",
+        image: "/destinasi/surabaya/house.png",
         "data-ai-hint": "sampoerna museum",
         description:
           "Museum unik yang menampilkan sejarah industri kretek di Indonesia, bertempat di bangunan kolonial Belanda yang megah.",
       },
       {
         name: "Kenjeran Park (Kenpark)",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Kenjeran+Park",
+        image: "/destinasi/surabaya/kenpark.png",
         "data-ai-hint": "kenjeran park pagoda",
         description:
           "Area rekreasi luas dengan pemandangan laut, Pagoda Tian Ti, dan Patung Buddha Empat Wajah yang mengesankan.",
@@ -618,39 +612,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "makassar",
     province: "sulawesi-selatan",
     name: "Panduan Wisata Makassar",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Makassar",
+    heroImage: "/destinasi/makassar/makassar.png",
     "data-ai-hint": "losari beach",
     short_description:
       "Gerbang Indonesia Timur yang mempesona, dari pantai ikonik, benteng bersejarah, hingga surga kupu-kupu.",
     destinations: [
       {
         name: "Pantai Losari",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Pantai+Losari",
+        image: "/destinasi/makassar/losari.png",
         "data-ai-hint": "losari beach sunset",
         description:
           "Nikmati matahari terbenam yang spektakuler sambil mencicipi Pisang Epe. Ikon kota Makassar yang tak boleh dilewatkan.",
       },
       {
         name: "Benteng Rotterdam",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Benteng+Rotterdam",
+        image: "/destinasi/makassar/rotterdam.png",
         "data-ai-hint": "fort rotterdam",
         description:
           "Benteng peninggalan Kerajaan Gowa-Tallo yang kemudian diperkuat oleh Belanda. Saksi bisu sejarah panjang Makassar.",
       },
       {
         name: "Taman Nasional Bantimurung",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Taman+Nasional+Bantimurung",
+        image: "/destinasi/makassar/bantimurung.png",
         "data-ai-hint": "bantimurung waterfall",
         description:
           'Dikenal sebagai "Kerajaan Kupu-Kupu". Nikmati keindahan air terjun, gua-gua, dan ribuan kupu-kupu yang beterbangan.',
       },
       {
         name: "Rammang-Rammang",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Rammang-Rammang",
+        image: "/destinasi/makassar/rammang.png",
         "data-ai-hint": "rammang rammang karst",
         description:
           "Susuri sungai dengan perahu di antara gugusan pegunungan karst terbesar ketiga di dunia. Pemandangan yang luar biasa.",
