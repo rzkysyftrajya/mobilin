@@ -9,11 +9,11 @@ import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper
 import CarCard from "@/components/shared/car-card";
 
 type Props = {
-  params: { slug: string, lang: Locale };
+  params: { slug: string; lang: Locale };
 };
 
 async function getCarData(slug: string): Promise<Car | undefined> {
-  return cars.find(c => c.name.toLowerCase().replace(/ /g, '-') === slug);
+  return cars.find((c) => c.name.toLowerCase().replace(/ /g, "-") === slug);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!car) {
     return {};
   }
-  
+
   const dict = await getDictionary(params.lang);
 
-  const priceMatic = car.price.matic ? `Matic: ${car.price.matic}` : '';
-  const priceManual = car.price.manual ? `Manual: ${car.price.manual}` : '';
+  const priceMatic = car.price.matic ? `Matic: ${car.price.matic}` : "";
+  const priceManual = car.price.manual ? `Manual: ${car.price.manual}` : "";
 
   return {
     title: `${dict.site.name} - ${car.name}`,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `/${params.lang}/mobil/${params.slug}`,
     },
-     openGraph: {
+    openGraph: {
       title: `Sewa Mobil ${car.name} - ${dict.site.name}`,
       description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang.`,
       url: `/${params.lang}/mobil/${params.slug}`,
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           height: 400,
           alt: car.name,
         },
-      ]
+      ],
     },
   };
 }
@@ -57,42 +57,44 @@ export default async function CarDetailPage({ params }: Props) {
   }
 
   const dictionary = await getDictionary(params.lang);
-  const similarCars = cars.filter(c => c.category === car.category && c.name !== car.name).slice(0, 2);
+  const similarCars = cars
+    .filter((c) => c.category === car.category && c.name !== car.name)
+    .slice(0, 2);
 
   const offers = [];
   if (car.price.manual) {
     offers.push({
       "@type": "Offer",
-      "priceCurrency": "IDR",
-      "price": car.price.manual,
-      "name": "Manual Transmission",
-      "availability": "https://schema.org/InStock"
+      priceCurrency: "IDR",
+      price: car.price.manual,
+      name: "Manual Transmission",
+      availability: "https://schema.org/InStock",
     });
   }
   if (car.price.matic) {
     offers.push({
       "@type": "Offer",
-      "priceCurrency": "IDR",
-      "price": car.price.matic,
-      "name": "Automatic Transmission",
-      "availability": "https://schema.org/InStock"
+      priceCurrency: "IDR",
+      price: car.price.matic,
+      name: "Automatic Transmission",
+      availability: "https://schema.org/InStock",
     });
   }
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Car",
-    "name": car.name,
-    "description": `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}. Tersedia transmisi manual dan otomatis.`,
-    "image": car.image,
-    "brand": {
+    name: car.name,
+    description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}. Tersedia transmisi manual dan otomatis.`,
+    image: car.image,
+    brand: {
       "@type": "Brand",
-      "name": car.name.split(' ')[0]
+      name: car.name.split(" ")[0],
     },
-    "vehicleModelDate": car.year,
-    "seatingCapacity": car.capacity.toString(),
-    "fuelType": car.fuel,
-    "offers": offers
+    vehicleModelDate: car.year,
+    seatingCapacity: car.capacity.toString(),
+    fuelType: car.fuel,
+    offers: offers,
   };
 
   return (
@@ -111,7 +113,13 @@ export default async function CarDetailPage({ params }: Props) {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 {similarCars.map((similarCar) => (
-                  <CarCard key={similarCar.name} car={similarCar} lang={params.lang} dict={dictionary.popular_cars} buttonText={dictionary.buttons.see_details}/>
+                  <CarCard
+                    key={similarCar.name}
+                    car={similarCar}
+                    lang={params.lang}
+                    dict={dictionary.popular_cars}
+                    buttonText={dictionary.buttons.see_details}
+                  />
                 ))}
               </div>
             </div>
