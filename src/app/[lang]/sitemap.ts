@@ -6,7 +6,8 @@ import { cities } from '@/lib/cities';
 import { services } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mobilin-go-app.com'; // Replace with your actual domain
+  // fallback ke env atau langsung domain
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.mobilinaja.com";
 
   const staticRoutes = [
     '/',
@@ -22,8 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/destinasi',
     '/layanan',
   ].flatMap(path => i18n.locales.map(locale => ({
-      url: `${baseUrl}/${locale}${path === '/' ? '' : path}`,
-      lastModified: new Date(),
+    url: `${baseUrl}/${locale}${path === '/' ? '' : path}`,
+    lastModified: new Date(),
   })));
 
 
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }))
   );
-  
+
   const cityRoutes = cities.flatMap((city) =>
     i18n.locales.map(locale => ({
       url: `${baseUrl}/${locale}/rental-mobil/${city.provinceSlug}/${city.slug}`,
@@ -56,30 +57,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = blogPosts.flatMap((post) =>
     i18n.locales.map(locale => ({
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.9,
-    }))
-  );
-  
-  const destinationRoutes = destinationAreas.flatMap((dest) =>
-    i18n.locales.map(locale => ({
-        url: `${baseUrl}/${locale}/destinasi/${dest.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.9,
-    }))
-  );
-  
-  const serviceRoutes = services.flatMap((service) =>
-    i18n.locales.map(locale => ({
-        url: `${baseUrl}/${locale}/layanan/${service.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
+      url: `${baseUrl}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     }))
   );
 
-  return [...staticRoutes, ...provinceRoutes, ...cityRoutes, ...carRoutes, ...blogRoutes, ...destinationRoutes, ...serviceRoutes];
+  const destinationRoutes = destinationAreas.flatMap((dest) =>
+    i18n.locales.map(locale => ({
+      url: `${baseUrl}/${locale}/destinasi/${dest.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    }))
+  );
+
+  const serviceRoutes = services.flatMap((service) =>
+    i18n.locales.map(locale => ({
+      url: `${baseUrl}/${locale}/layanan/${service.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }))
+  );
+
+  return [
+    ...staticRoutes,
+    ...provinceRoutes,
+    ...cityRoutes,
+    ...carRoutes,
+    ...blogRoutes,
+    ...destinationRoutes,
+    ...serviceRoutes,
+  ];
 }
