@@ -8,7 +8,13 @@ import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/lib/dictionary";
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return {
     title: dict.footer.destinations,
@@ -16,7 +22,13 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   }
 };
 
-export default async function DestinationsPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function DestinationsPage(props: { params: Promise<{ lang: Locale }> }) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return (
     <div className="container py-12 md:py-20">

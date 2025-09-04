@@ -16,10 +16,11 @@ import { CitySelection } from "@/components/shared/city-selection";
 import { cities } from "@/lib/cities";
 
 type Props = {
-  params: { province: string; lang: Locale };
+  params: Promise<{ province: string; lang: Locale }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const { province: provinceSlug, lang } = params; // ✅ ga usah pakai await
 
   const provinceData = getProvinceNameBySlug(provinceSlug);
@@ -64,7 +65,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ProvincePage({ params }: Props) {
+export default async function ProvincePage(props: Props) {
+  const params = await props.params;
   const { province: provinceSlug, lang } = params; // ✅ langsung destructure
   const provinceData = getProvinceNameBySlug(provinceSlug);
 
@@ -103,7 +105,6 @@ export default async function ProvincePage({ params }: Props) {
           </div>
         </div>
       </ScrollAnimationWrapper>
-
       <div className="container py-12 md:py-16 space-y-12 md:space-y-20">
         {/* Intro Section */}
         <ScrollAnimationWrapper>

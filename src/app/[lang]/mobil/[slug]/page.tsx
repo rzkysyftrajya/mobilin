@@ -9,14 +9,15 @@ import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper
 import CarCard from "@/components/shared/car-card";
 
 type Props = {
-  params: { slug: string; lang: Locale };
+  params: Promise<{ slug: string; lang: Locale }>;
 };
 
 async function getCarData(slug: string): Promise<Car | undefined> {
   return cars.find((c) => c.name.toLowerCase().replace(/ /g, "-") === slug);
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const car = await getCarData(params.slug);
 
   if (!car) {
@@ -50,7 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function CarDetailPage({ params }: Props) {
+export default async function CarDetailPage(props: Props) {
+  const params = await props.params;
   const car = await getCarData(params.slug);
   if (!car) {
     notFound();

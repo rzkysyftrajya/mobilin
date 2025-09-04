@@ -9,7 +9,8 @@ import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/i18n-config";
 import PopularLocationsSection from "@/components/homepage/popular-locations-section";
 
-export default async function Home({ params }: { params: { lang: Locale } }) {
+export default async function Home(props: { params: Promise<{ lang: Locale }> }) {
+  const params = await props.params;
   // Jangan destruct langsung di parameter
   const lang = params.lang;
   const dict = await getDictionary(lang);

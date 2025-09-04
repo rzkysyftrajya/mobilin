@@ -5,6 +5,7 @@
   "/[lang]/destinasi/page": "app/[lang]/destinasi/page.js",
   "/[lang]/faq/page": "app/[lang]/faq/page.js",
   "/[lang]/kebijakan-privasi/page": "app/[lang]/kebijakan-privasi/page.js",
+  "/[lang]/kontak/page": "app/[lang]/kontak/page.js",
   "/[lang]/layanan/[slug]/page": "app/[lang]/layanan/[slug]/page.js",
   "/[lang]/layanan/page": "app/[lang]/layanan/page.js",
   "/[lang]/mobil/[slug]/page": "app/[lang]/mobil/[slug]/page.js",

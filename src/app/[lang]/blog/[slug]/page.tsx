@@ -7,10 +7,11 @@ import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper
 import { Locale } from "@/i18n-config";
 
 type Props = {
-  params: { slug: string, lang: Locale };
+  params: Promise<{ slug: string, lang: Locale }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const post = blogPosts.find(p => p.slug === params.slug);
 
   if (!post) {
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 
-export default function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage(props: Props) {
+  const params = await props.params;
   const post = blogPosts.find(p => p.slug === params.slug);
 
   if (!post) {

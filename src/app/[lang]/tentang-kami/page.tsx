@@ -8,11 +8,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function generateMetadata({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ lang: Locale }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return {
     title: dict.footer.about_us,
@@ -21,11 +27,17 @@ export async function generateMetadata({
   };
 }
 
-export default async function TentangKamiPage({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+export default async function TentangKamiPage(
+  props: {
+    params: Promise<{ lang: Locale }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   const pageDict = dict.about_page;
 

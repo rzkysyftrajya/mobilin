@@ -6,7 +6,13 @@ import type { Metadata } from "next";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/lib/dictionary";
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+    const params = await props.params;
+
+    const {
+        lang
+    } = params;
+
     const dict = await getDictionary(lang);
     return {
         title: dict.footer.careers,
@@ -35,55 +41,61 @@ const jobOpenings = [
     }
 ]
 
-export default async function KarierPage({ params: { lang } }: { params: { lang: Locale }}) {
+export default async function KarierPage(props: { params: Promise<{ lang: Locale }>}) {
+    const params = await props.params;
+
+    const {
+        lang
+    } = params;
+
     const dict = await getDictionary(lang);
     const pageDict = dict.career_page;
 
-  return (
-    <div className="container py-12 md:py-20">
-      <ScrollAnimationWrapper>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold !font-headline">
-            {pageDict.title}
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {pageDict.subtitle}
-          </p>
-        </div>
-      </ScrollAnimationWrapper>
-
-      <div className="max-w-4xl mx-auto">
+    return (
+      <div className="container py-12 md:py-20">
         <ScrollAnimationWrapper>
-            <h2 className="text-3xl font-bold !font-headline mb-8 text-center">{pageDict.available_positions}</h2>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h1 className="text-4xl md:text-5xl font-extrabold !font-headline">
+              {pageDict.title}
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {pageDict.subtitle}
+            </p>
+          </div>
         </ScrollAnimationWrapper>
-        <div className="space-y-6">
-            {jobOpenings.map((job, index) => (
-                <ScrollAnimationWrapper key={index} delay={index * 0.1}>
-                    <Card className="hover:shadow-lg transition-shadow duration-300">
-                        <CardHeader>
-                            <CardTitle className="!font-headline text-2xl">{job.title}</CardTitle>
-                             <div className="flex items-center gap-6 text-sm text-muted-foreground pt-2">
-                                <div className="flex items-center gap-1.5"><Briefcase className="w-4 h-4 text-primary"/>{job.type}</div>
-                                <div className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary"/>{job.location}</div>
-                             </div>
-                        </CardHeader>
-                        <CardContent>
-                            <CardDescription>{job.description}</CardDescription>
-                        </CardContent>
-                    </Card>
-                </ScrollAnimationWrapper>
-            ))}
+
+        <div className="max-w-4xl mx-auto">
+          <ScrollAnimationWrapper>
+              <h2 className="text-3xl font-bold !font-headline mb-8 text-center">{pageDict.available_positions}</h2>
+          </ScrollAnimationWrapper>
+          <div className="space-y-6">
+              {jobOpenings.map((job, index) => (
+                  <ScrollAnimationWrapper key={index} delay={index * 0.1}>
+                      <Card className="hover:shadow-lg transition-shadow duration-300">
+                          <CardHeader>
+                              <CardTitle className="!font-headline text-2xl">{job.title}</CardTitle>
+                               <div className="flex items-center gap-6 text-sm text-muted-foreground pt-2">
+                                  <div className="flex items-center gap-1.5"><Briefcase className="w-4 h-4 text-primary"/>{job.type}</div>
+                                  <div className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary"/>{job.location}</div>
+                               </div>
+                          </CardHeader>
+                          <CardContent>
+                              <CardDescription>{job.description}</CardDescription>
+                          </CardContent>
+                      </Card>
+                  </ScrollAnimationWrapper>
+              ))}
+          </div>
+           <ScrollAnimationWrapper>
+              <div className="text-center mt-12 p-8 bg-secondary/30 rounded-lg">
+                   <h3 className="text-2xl font-bold !font-headline mb-3">{pageDict.no_position_title}</h3>
+                   <p className="text-muted-foreground mb-6">{pageDict.no_position_subtitle}</p>
+                   <Button asChild className="bg-accent hover:bg-accent/90">
+                      <a href="mailto:hr@mobilin.com">{dict.buttons.apply_open}</a>
+                   </Button>
+              </div>
+          </ScrollAnimationWrapper>
         </div>
-         <ScrollAnimationWrapper>
-            <div className="text-center mt-12 p-8 bg-secondary/30 rounded-lg">
-                 <h3 className="text-2xl font-bold !font-headline mb-3">{pageDict.no_position_title}</h3>
-                 <p className="text-muted-foreground mb-6">{pageDict.no_position_subtitle}</p>
-                 <Button asChild className="bg-accent hover:bg-accent/90">
-                    <a href="mailto:hr@mobilin.com">{dict.buttons.apply_open}</a>
-                 </Button>
-            </div>
-        </ScrollAnimationWrapper>
       </div>
-    </div>
-  );
+    );
 }

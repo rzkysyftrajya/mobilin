@@ -11,7 +11,13 @@ import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/lib/dictionary";
 import Link from "next/link";
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const dict = await getDictionary(lang);
   return {
     title: dict.footer.faq,
@@ -19,7 +25,12 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
   }
 };
 
-export default function FaqPage({ params: { lang } }: { params: { lang: Locale }}) {
+export default async function FaqPage(props: { params: Promise<{ lang: Locale }>}) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
 
   const jsonLd = {
     "@context": "https://schema.org",

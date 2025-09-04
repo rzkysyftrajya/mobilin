@@ -11,14 +11,15 @@ import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/lib/dictionary";
 
 type Props = {
-  params: { slug: string; lang: Locale };
+  params: Promise<{ slug: string; lang: Locale }>;
 };
 
 export async function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const service = getServiceBySlug(params.slug);
 
   if (!service) {
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ServiceDetailPage({ params }: Props) {
+export default async function ServiceDetailPage(props: Props) {
+  const params = await props.params;
   const service = getServiceBySlug(params.slug);
   const dict = await getDictionary(params.lang);
   const pageDict = dict.service_page;
