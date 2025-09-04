@@ -1,0 +1,13 @@
+# robots.txt for https://www.mobilinaja.com/
+
+# Allow all crawlers
+User-agent: *
+Disallow:
+
+# Block sensitive folders (optional)
+# Disallow: /api/
+# Disallow: /admin/
+# Disallow: /auth/
+
+# Sitemap location
+Sitemap: https://www.mobilinaja.com/sitemap.xml
