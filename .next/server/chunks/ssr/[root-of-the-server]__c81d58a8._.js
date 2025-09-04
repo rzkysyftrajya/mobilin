@@ -145,6 +145,7 @@ const i18n = {
 "[project]/mobilin/src/app/layout.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// src/app/layout.tsx
 __turbopack_context__.s([
     "default",
     ()=>RootLayout,
@@ -174,76 +175,113 @@ async function generateStaticParams() {
         }));
 }
 const metadata = {
-    metadataBase: new URL('https://www.mobilinaja.com'),
+    metadataBase: new URL("https://www.mobilinaja.com"),
     title: {
-        default: 'Mobilin - Sewa Mobil Jadi Gampang',
-        template: `%s - Mobilin`
+        default: "Mobilin - Sewa Mobil Jadi Gampang",
+        template: "%s - Mobilin"
     },
-    description: 'Mau Kemana Aja? Mobilin Aja! Rental mobil praktis & terjangkau di seluruh Indonesia.',
+    description: "Mau Kemana Aja? Mobilin Aja! Rental mobil praktis & terjangkau di seluruh Indonesia.",
     keywords: [
-        'rental mobil',
-        'sewa mobil',
-        'mobilin',
-        'mobilin aja',
-        'rental mobil murah'
+        "rental mobil",
+        "sewa mobil",
+        "mobilin",
+        "mobilin aja",
+        "rental mobil murah"
     ],
+    // ✅ Open Graph (untuk share di FB, WA, LinkedIn, dsb)
     openGraph: {
         title: {
-            default: 'Mobilin - Sewa Mobil Jadi Gampang',
-            template: `%s - Mobilin`
+            default: "Mobilin - Sewa Mobil Jadi Gampang",
+            template: "%s - Mobilin"
         },
-        description: 'Mau Kemana Aja? Mobilin Aja!',
-        url: '/',
-        siteName: 'Mobilin',
+        description: "Mau Kemana Aja? Mobilin Aja!",
+        url: "/",
+        siteName: "Mobilin",
         images: [
             {
-                url: '/og-image.jpg',
+                url: "/og-image.jpg",
                 width: 1200,
                 height: 630,
-                alt: 'Mobilin - Rental Mobil'
+                alt: "Mobilin - Rental Mobil"
             }
         ],
-        locale: 'id_ID',
-        type: 'website'
+        locale: "id_ID",
+        type: "website"
     },
+    // ✅ Twitter card (untuk preview di Twitter/X)
     twitter: {
-        card: 'summary_large_image',
+        card: "summary_large_image",
         title: {
-            default: 'Mobilin - Sewa Mobil Jadi Gampang',
-            template: `%s - Mobilin`
+            default: "Mobilin - Sewa Mobil Jadi Gampang",
+            template: "%s - Mobilin"
         },
-        description: 'Mau Kemana Aja? Mobilin Aja!',
+        description: "Mau Kemana Aja? Mobilin Aja!",
         images: [
-            '/twitter-image.jpg'
+            "/twitter-image.jpg"
         ]
     },
+    // ✅ Robots
     robots: {
         index: true,
         follow: true,
         googleBot: {
             index: true,
             follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1
         }
     },
+    // ✅ Favicon & App Icons (multi-size)
     icons: {
-        icon: '/favicon.ico',
-        shortcut: '/favicon-16x16.png',
-        apple: '/apple-touch-icon.png'
+        icon: [
+            {
+                url: "/favicon.ico",
+                sizes: "any"
+            },
+            {
+                url: "/favicon-16x16.png",
+                sizes: "16x16",
+                type: "image/png"
+            },
+            {
+                url: "/favicon-32x32.png",
+                sizes: "32x32",
+                type: "image/png"
+            }
+        ],
+        apple: [
+            {
+                url: "/apple-touch-icon.png",
+                sizes: "180x180",
+                type: "image/png"
+            }
+        ],
+        other: [
+            {
+                rel: "android-chrome",
+                url: "/android-chrome-192x192.png",
+                sizes: "192x192"
+            },
+            {
+                rel: "android-chrome",
+                url: "/android-chrome-512x512.png",
+                sizes: "512x512"
+            }
+        ]
     },
-    manifest: '/site.webmanifest'
+    // ✅ Manifest untuk installable app (PWA)
+    manifest: "/site.webmanifest"
 };
 const viewport = {
     themeColor: [
         {
-            media: '(prefers-color-scheme: light)',
-            color: '#1ABC9C'
+            media: "(prefers-color-scheme: light)",
+            color: "#1ABC9C"
         },
         {
-            media: '(prefers-color-scheme: dark)',
-            color: '#0D1117'
+            media: "(prefers-color-scheme: dark)",
+            color: "#0D1117"
         }
     ]
 };
@@ -259,12 +297,12 @@ function RootLayout({ children, params }) {
                     href: "https://images.unsplash.com"
                 }, void 0, false, {
                     fileName: "[project]/mobilin/src/app/layout.tsx",
-                    lineNumber: 97,
-                    columnNumber: 10
+                    lineNumber: 136,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/mobilin/src/app/layout.tsx",
-                lineNumber: 96,
+                lineNumber: 134,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -274,24 +312,24 @@ function RootLayout({ children, params }) {
                         children,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$src$2f$components$2f$ui$2f$toaster$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Toaster"], {}, void 0, false, {
                             fileName: "[project]/mobilin/src/app/layout.tsx",
-                            lineNumber: 104,
+                            lineNumber: 143,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/mobilin/src/app/layout.tsx",
-                    lineNumber: 102,
+                    lineNumber: 141,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/mobilin/src/app/layout.tsx",
-                lineNumber: 99,
+                lineNumber: 138,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/mobilin/src/app/layout.tsx",
-        lineNumber: 95,
+        lineNumber: 129,
         columnNumber: 5
     }, this);
 }

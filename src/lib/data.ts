@@ -651,36 +651,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "lombok",
     province: "nusa-tenggara-barat",
     name: "Panduan Wisata Lombok",
-    heroImage: "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Lombok",
+    heroImage: "/destinasi/lombok/lombok.png",
     "data-ai-hint": "lombok beach mountain",
     short_description:
       "Saingan Bali yang menawan, dengan pantai perawan, sirkuit kelas dunia, dan Gunung Rinjani yang megah.",
     destinations: [
       {
         name: "Gili Trawangan, Meno, & Air",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Gili+Trawangan",
+        image: "/destinasi/lombok/gili.png",
         "data-ai-hint": "gili trawangan beach",
         description:
           "Tiga pulau surga dengan karakter berbeda. Pesta di Gili T, bulan madu di Gili Meno, atau bersantai di Gili Air.",
       },
       {
         name: "Sirkuit Mandalika & Pantai Kuta",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Sirkuit+Mandalika",
+        image: "/destinasi/lombok/mandalika.png",
         "data-ai-hint": "mandalika circuit",
         description:
           "Rasakan atmosfer balap internasional di Sirkuit Mandalika, lalu nikmati keindahan Pantai Kuta dengan pasir mericanya yang unik.",
       },
       {
         name: "Gunung Rinjani",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Gunung+Rinjani",
+        image: "/destinasi/lombok/rinjani.png",
         "data-ai-hint": "rinjani mountain lake",
         description:
           "Salah satu pendakian terindah di Indonesia. Capai puncaknya dan saksikan keindahan Danau Segara Anak di kaldera.",
       },
       {
         name: "Desa Sade & Sukarara",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Desa+Sade",
+        image: "/destinasi/lombok/desa.png",
         "data-ai-hint": "sasak traditional house",
         description:
           "Pelajari budaya suku Sasak. Lihat rumah tradisional di Desa Sade dan saksikan proses menenun kain songket di Sukarara.",
@@ -691,36 +690,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "labuan-bajo",
     province: "nusa-tenggara-timur",
     name: "Panduan Wisata Labuan Bajo & Flores",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Labuan+Bajo",
+    heroImage: "/destinasi/ntt/labuan.png",
     "data-ai-hint": "labuan bajo island",
     short_description:
       "Gerbang menuju dunia prasejarah Komodo dan keajaiban alam Flores yang tak ada habisnya.",
     destinations: [
       {
         name: "Pulau Komodo & Rinca",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Pulau+Komodo",
+        image: "/destinasi/ntt/komodo.png",
         "data-ai-hint": "komodo dragon",
         description:
           "Bertemu langsung dengan kadal raksasa prasejarah, Komodo, di habitat aslinya. Pengalaman sekali seumur hidup.",
       },
       {
         name: "Pulau Padar",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Pulau+Padar",
+        image: "/destinasi/ntt/padar.png",
         "data-ai-hint": "padar island",
         description:
           "Daki ke puncak dan dapatkan pemandangan ikonik tiga teluk dengan warna pantai yang berbeda. Salah satu spot foto terbaik di Indonesia.",
       },
       {
         name: "Pink Beach & Manta Point",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Pink+Beach",
+        image: "/destinasi/ntt/pink.png",
         "data-ai-hint": "pink beach drone",
         description:
           "Bersantai di pantai berpasir merah muda yang langka, lalu snorkeling atau diving bersama ikan pari Manta yang anggun.",
       },
       {
         name: "Gua Rangko",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Gua+Rangko",
+        image: "/destinasi/ntt/rangko.png",
         "data-ai-hint": "rangko cave",
         description:
           "Temukan kolam renang alami dengan air asin yang jernih di dalam gua. Cahaya matahari yang masuk menciptakan efek magis.",
@@ -731,37 +729,35 @@ export const destinationAreas: DestinationArea[] = [
     slug: "raja-ampat",
     province: "papua-barat-daya",
     name: "Panduan Wisata Raja Ampat",
-    heroImage:
-      "https://placehold.co/1200x630/1abc9c/ffffff?text=Wisata+Raja+Ampat",
+    heroImage: "/destinasi/raja-ampat/papua.png",
     "data-ai-hint": "raja ampat islands",
     short_description:
       "Surga terakhir di bumi. Jelajahi kepulauan dengan keanekaragaman hayati laut terkaya di dunia.",
     destinations: [
       {
         name: "Wayag & Pianemo",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Wayag",
+        image: "/destinasi/raja-ampat/wayang.png",
         "data-ai-hint": "wayag islands",
         description:
           "Dua ikon Raja Ampat. Daki bukit karst untuk melihat pemandangan gugusan pulau yang menakjubkan. Pianemo adalah versi mininya.",
       },
       {
         name: "Arborek & Sawinggrai",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Desa+Arborek",
+        image: "/destinasi/raja-ampat/arborek.png",
         "data-ai-hint": "arborek village pier",
         description:
           "Kunjungi desa wisata yang ramah dan alami kehidupan lokal. Dermaga di desa-desa ini adalah spot snorkeling yang luar biasa.",
       },
       {
         name: "Pasir Timbul & Friwen Wall",
-        image: "https://placehold.co/600x400/1abc9c/ffffff?text=Pasir+Timbul",
+        image: "/destinasi/raja-ampat/pasir.png",
         "data-ai-hint": "sandbar raja ampat",
         description:
           "Berjalan di atas pasir putih di tengah lautan biru saat air surut di Pasir Timbul. Lalu, jelajahi dinding karang yang indah di Friwen.",
       },
       {
         name: "Melihat Burung Cenderawasih",
-        image:
-          "https://placehold.co/600x400/1abc9c/ffffff?text=Burung+Cenderawasih",
+        image: "/destinasi/raja-ampat/burung.png",
         "data-ai-hint": "bird of paradise",
         description:
           "Bangun pagi-pagi dan trekking ke dalam hutan untuk menyaksikan tarian magis dari Burung Cenderawasih, sang burung surga.",

@@ -1181,13 +1181,13 @@ function FloatingWhatsappButton(param) {
         className: "fixed bottom-6 right-6 z-40 group flex items-center gap-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-background px-4 py-2 rounded-md shadow-lg whitespace-nowrap transition-all duration-300", isTooltipVisible ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-background px-4 py-2 rounded-md shadow-lg whitespace-nowrap transition-all duration-300", isTooltipVisible ? "opacity-100" : "opacity-0 group-hover:opacity-100"),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "font-semibold text-foreground",
                     children: text
                 }, void 0, false, {
                     fileName: "[project]/mobilin/src/components/shared/floating-whatsapp-button.tsx",
-                    lineNumber: 30,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
@@ -1206,11 +1206,12 @@ function FloatingWhatsappButton(param) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$mobilin$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        src: "https://placehold.co/40x40/ffffff/1ABC9C?text=WA",
+                        src: "/icon/whatsapp.png",
                         alt: "WhatsApp Icon",
                         width: 40,
                         height: 40,
-                        className: "rounded-full relative"
+                        className: "rounded-full relative",
+                        unoptimized: true
                     }, void 0, false, {
                         fileName: "[project]/mobilin/src/components/shared/floating-whatsapp-button.tsx",
                         lineNumber: 36,
@@ -1219,7 +1220,7 @@ function FloatingWhatsappButton(param) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/mobilin/src/components/shared/floating-whatsapp-button.tsx",
-                lineNumber: 32,
+                lineNumber: 34,
                 columnNumber: 7
             }, this)
         ]

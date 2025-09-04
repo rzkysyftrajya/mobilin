@@ -5,18 +5,56 @@ import { Locale } from "@/i18n-config";
 import Image from "next/image";
 
 const socialLinks = [
-  { href: "https://wa.me/6285177262716", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=WA", label: "WhatsApp" },
-  { href: "#", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=TT", label: "TikTok" },
-  { href: "#", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=IG", label: "Instagram" },
-  { href: "#", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=YT", label: "YouTube" },
-  { href: "#", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=FB", label: "Facebook" },
-  { href: "#", imageUrl: "https://placehold.co/24x24/1ABC9C/FFFFFF?text=X", label: "Twitter" },
+  {
+    href: "https://wa.me/6285177262716",
+    imageUrl: "/icon/whatsapp.png",
+    label: "WhatsApp",
+  },
+  {
+    href: "#",
+    imageUrl: "/icon/tik-tok.png",
+    label: "TikTok",
+  },
+  {
+    href: "#",
+    imageUrl: "/icon/instagram.png",
+    label: "Instagram",
+  },
+  {
+    href: "#",
+    imageUrl: "/icon/youtube.png",
+    label: "YouTube",
+  },
+  {
+    href: "#",
+    imageUrl: "/icon/facebook.png",
+    label: "Facebook",
+  },
+  {
+    href: "#",
+    imageUrl: "/icon/twitter.png",
+    label: "Twitter",
+  },
 ];
 
-
-export default async function Footer({ dict, lang }: { dict: any, lang: Locale }) {
+export default async function Footer({
+  dict,
+  lang,
+}: {
+  dict: any;
+  lang: Locale;
+}) {
   const footerDict = dict.footer;
-  const popularProvinces = provinces.filter(p => ["jakarta", "jawa-barat", "jawa-tengah", "jawa-timur", "bali", "yogyakarta"].includes(p.slug));
+  const popularProvinces = provinces.filter((p) =>
+    [
+      "jakarta",
+      "jawa-barat",
+      "jawa-tengah",
+      "jawa-timur",
+      "bali",
+      "yogyakarta",
+    ].includes(p.slug)
+  );
 
   const navLinks = [
     { href: `/${lang}/tentang-kami`, label: footerDict.about_us },
@@ -29,12 +67,11 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
   ];
 
   const companyLinks = [
-      { href: `/${lang}/testimonial`, label: footerDict.testimonials },
-      { href: `/${lang}/karier`, label: footerDict.careers },
-      { href: `/${lang}/kebijakan-privasi`, label: footerDict.privacy_policy },
-      { href: `/${lang}/syarat-ketentuan`, label: footerDict.terms_conditions },
+    { href: `/${lang}/testimonial`, label: footerDict.testimonials },
+    { href: `/${lang}/karier`, label: footerDict.careers },
+    { href: `/${lang}/kebijakan-privasi`, label: footerDict.privacy_policy },
+    { href: `/${lang}/syarat-ketentuan`, label: footerDict.terms_conditions },
   ];
-
 
   return (
     <footer className="bg-secondary/50 border-t mt-auto">
@@ -48,7 +85,7 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
             <p className="text-sm text-muted-foreground">
               {footerDict.description}
             </p>
-             <div className="flex space-x-4">
+            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -58,7 +95,13 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
                   className="text-muted-foreground hover:opacity-80"
                   aria-label={social.label}
                 >
-                  <Image src={social.imageUrl} alt={social.label} width={24} height={24} className="rounded-full" />
+                  <Image
+                    src={social.imageUrl}
+                    alt={social.label}
+                    width={24}
+                    height={24}
+                    className="rounded-full"
+                  />
                 </a>
               ))}
             </div>
@@ -68,7 +111,10 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -80,19 +126,25 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary">
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary"
+                  >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-           <div>
+          <div>
             <h3 className="font-semibold mb-4">{footerDict.popular_areas}</h3>
             <ul className="space-y-2">
               {popularProvinces.map((province) => (
                 <li key={province.slug}>
-                  <Link href={`/${lang}/rental-mobil/${province.slug}`} className="text-sm text-muted-foreground hover:text-primary">
+                  <Link
+                    href={`/${lang}/rental-mobil/${province.slug}`}
+                    className="text-sm text-muted-foreground hover:text-primary"
+                  >
                     Rental Mobil {province.name}
                   </Link>
                 </li>
@@ -102,13 +154,29 @@ export default async function Footer({ dict, lang }: { dict: any, lang: Locale }
           <div>
             <h3 className="font-semibold mb-4">{footerDict.contact}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="mailto:halo@mobilinaja.com" className="hover:text-primary">halo@mobilinaja.com</a></li>
-              <li><a href="tel:085177262716" className="hover:text-primary">0851-7726-2716</a></li>
-              <li>Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan</li>
+              <li>
+                <a
+                  href="mailto:halo@mobilinaja.com"
+                  className="hover:text-primary"
+                >
+                  mobilin809@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:085177262716" className="hover:text-primary">
+                  0851-7726-2716
+                </a>
+              </li>
+              <li>
+                Jalan Sempurna Gang Mawar 6 medan Sumatera Utara 20371 Indonesia
+              </li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: footerDict.copyright }}/>
+        <div
+          className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground"
+          dangerouslySetInnerHTML={{ __html: footerDict.copyright }}
+        />
       </div>
     </footer>
   );
