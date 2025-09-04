@@ -5,6 +5,8 @@ import { Providers } from "@/components/providers";
 import { Poppins, PT_Sans } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import { i18n } from "@/i18n-config";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontPoppins = Poppins({
   subsets: ["latin"],
@@ -36,9 +38,9 @@ export const metadata: Metadata = {
     "mobilin",
     "mobilin aja",
     "rental mobil murah",
+    "rental mobil medan",
+    "rental mobil bandara",
   ],
-
-  // ✅ Open Graph (untuk share di FB, WA, LinkedIn, dsb)
   openGraph: {
     title: {
       default: "Mobilin - Sewa Mobil Jadi Gampang",
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Mobilin",
     images: [
       {
-        url: "/og-image.jpg", // default, bisa di-override per halaman
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Mobilin - Rental Mobil",
@@ -58,8 +60,6 @@ export const metadata: Metadata = {
     locale: "id_ID",
     type: "website",
   },
-
-  // ✅ Twitter card (untuk preview di Twitter/X)
   twitter: {
     card: "summary_large_image",
     title: {
@@ -69,8 +69,6 @@ export const metadata: Metadata = {
     description: "Mau Kemana Aja? Mobilin Aja!",
     images: ["/twitter-image.jpg"],
   },
-
-  // ✅ Robots
   robots: {
     index: true,
     follow: true,
@@ -82,8 +80,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  // ✅ Favicon & App Icons (multi-size)
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -106,8 +102,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
-  // ✅ Manifest untuk installable app (PWA)
   manifest: "/site.webmanifest",
 };
 
@@ -118,26 +112,18 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function RootLayout(
-  props: Readonly<{
-    children: React.ReactNode;
-    params: { lang: string };
-  }>
-) {
-  const params = await props.params;
-
-  const {
-    children
-  } = props;
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: { lang: string };
+}>) {
+  const lang = params.lang ?? i18n.defaultLocale;
 
   return (
-    <html
-      lang={params.lang ?? i18n.defaultLocale}
-      className="scroll-smooth"
-      suppressHydrationWarning
-    >
+    <html lang={lang} className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Preconnect biar gambar lebih cepat */}
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body
@@ -146,6 +132,10 @@ export default async function RootLayout(
         <Providers>
           {children}
           <Toaster />
+          {/* Vercel Analytics */}
+          <Analytics />
+          {/* Vercel Speed Insights */}
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
