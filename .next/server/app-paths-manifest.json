@@ -1,17 +1,9 @@
 {
+  "/[lang]/blog/[slug]/page": "app/[lang]/blog/[slug]/page.js",
   "/[lang]/blog/page": "app/[lang]/blog/page.js",
-  "/[lang]/daftar-mobil/page": "app/[lang]/daftar-mobil/page.js",
-  "/[lang]/destinasi/[slug]/page": "app/[lang]/destinasi/[slug]/page.js",
   "/[lang]/destinasi/page": "app/[lang]/destinasi/page.js",
-  "/[lang]/faq/page": "app/[lang]/faq/page.js",
-  "/[lang]/kebijakan-privasi/page": "app/[lang]/kebijakan-privasi/page.js",
   "/[lang]/kontak/page": "app/[lang]/kontak/page.js",
-  "/[lang]/layanan/[slug]/page": "app/[lang]/layanan/[slug]/page.js",
   "/[lang]/layanan/page": "app/[lang]/layanan/page.js",
-  "/[lang]/mobil/[slug]/page": "app/[lang]/mobil/[slug]/page.js",
   "/[lang]/page": "app/[lang]/page.js",
-  "/[lang]/rental-mobil/[province]/page": "app/[lang]/rental-mobil/[province]/page.js",
-  "/[lang]/tentang-kami/page": "app/[lang]/tentang-kami/page.js",
-  "/[lang]/testimonial/page": "app/[lang]/testimonial/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }

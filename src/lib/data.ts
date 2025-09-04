@@ -328,7 +328,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Liburan keluarga akan segera tiba! Salah satu persiapan penting adalah memilih mobil rental yang tepat. Simak 5 tips dari Mobilin agar perjalanan Anda nyaman dan aman.",
     author: "Tim Mobilin",
-    image: "https://placehold.co/800x400/1abc9c/ffffff?text=Tips+Memilih+Mobil",
+    image: "/blog/blog1.png",
     "data-ai-hint": "family travel car",
     content: `
             <p>Memilih mobil rental yang tepat adalah kunci untuk liburan keluarga yang sukses. Kenyamanan, keamanan, dan kapasitas adalah beberapa faktor penting yang perlu dipertimbangkan. Berikut adalah 5 tips jitu dari Mobilin untuk membantu Anda membuat keputusan yang tepat:</p>
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Jelajahi keindahan Pulau Jawa dengan road trip! Berikut beberapa rekomendasi destinasi yang wajib Anda kunjungi bersama mobil sewaan dari Mobilin.",
     author: "Tim Mobilin",
-    image: "https://placehold.co/800x400/1abc9c/ffffff?text=Road+Trip+Jawa",
+    image: "/blog/blog2.png",
     "data-ai-hint": "java landscape road",
     content: `
             <p>Pulau Jawa menyimpan sejuta pesona yang menanti untuk dijelajahi. Melakukan road trip adalah cara terbaik untuk menikmati setiap sudut keindahannya. Dengan mobil sewaan dari Mobilin, petualangan Anda akan menjadi lebih fleksibel dan nyaman. Berikut beberapa rute inspiratif:</p>
