@@ -124,7 +124,14 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="scroll-smooth" suppressHydrationWarning>
       <head>
+        {/* Preconnect untuk gambar */}
         <link rel="preconnect" href="https://images.unsplash.com" />
+
+        {/* Google site verification */}
+        <meta
+          name="google-site-verification"
+          content="1Bax7aPjj1-VAbhrzPseFaAfIXfasSZoY9RHTi9h-Is"
+        />
       </head>
       <body
         className={`${fontPoppins.variable} ${fontPtSans.variable} min-h-screen bg-background font-body antialiased flex flex-col`}
