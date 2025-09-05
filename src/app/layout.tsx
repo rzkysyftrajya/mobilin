@@ -32,9 +32,131 @@ export const metadata: Metadata = {
   },
   description:
     "Mau Kemana Aja? Mobilin Aja! Rental mobil praktis & terjangkau di seluruh Indonesia.",
-  keywords: [
-    "rental mobil",
-    "sewa mobil",
+  keywords:
+    "rental mobil, sewa mobil, mobilin, mobilin aja, rental mobil murah, rental mobil medan, rental mobil bandara",
+  openGraph: {
+    title: {
+      default: "Mobilin - Sewa Mobil Jadi Gampang",
+      template: "%s - Mobilin",
+    },
+    description: "Mau Kemana Aja? Mobilin Aja!",
+    url: "/",
+    siteName: "Mobilin",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mobilin - Rental Mobil",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: {
+      default: "Mobilin - Sewa Mobil Jadi Gampang",
+      template: "%s - Mobilin",
+    },
+    description: "Mau Kemana Aja? Mobilin Aja!",
+    images: ["/twitter-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome",
+        url: "/android-chrome-192x192.png",
+        sizes: "192x192",
+      },
+      {
+        rel: "android-chrome",
+        url: "/android-chrome-512x512.png",
+        sizes: "512x512",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1ABC9C" },
+    { media: "(prefers-color-scheme: dark)", color: "#0D1117" },
+  ],
+};
+
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: { lang: string };
+}>) {
+  const lang = params.lang ?? i18n.defaultLocale;
+
+  return (
+    <html lang={lang} className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Preconnect untuk gambar */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+
+        {/* Google site verification */}
+        <meta
+          name="google-site-verification"
+          content="1Bax7aPjj1-VAbhrzPseFaAfIXfasSZoY9RHTi9h-Is"
+        />
+
+        {/* Google Ads Global site tag */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17527429112"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17527429112');
+            `,
+          }}
+        />
+      </head>
+      <body
+        className={`${fontPoppins.variable} ${fontPtSans.variable} min-h-screen bg-background font-body antialiased flex flex-col`}
+      >
+        <Providers>
+          {children}
+          <Toaster />
+          {/* Vercel Analytics */}
+          <Analytics />
+          {/* Vercel Speed Insights */}
+          <SpeedInsights />
+        </Providers>
+      </body>
+    </html>
+  );
+}    "sewa mobil",
     "mobilin",
     "mobilin aja",
     "rental mobil murah",
