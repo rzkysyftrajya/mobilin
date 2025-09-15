@@ -32,15 +32,8 @@ export const metadata: Metadata = {
   },
   description:
     "Mau Kemana Aja? Mobilin Aja! Rental mobil praktis & terjangkau di seluruh Indonesia.",
-  keywords: [
-    "rental mobil",
-    "sewa mobil",
-    "mobilin",
-    "mobilin aja",
-    "rental mobil murah",
-    "rental mobil medan",
-    "rental mobil bandara",
-  ],
+  keywords:
+    "rental mobil, sewa mobil, mobilin, mobilin aja, rental mobil murah, rental mobil medan, rental mobil bandara",
   openGraph: {
     title: {
       default: "Mobilin - Sewa Mobil Jadi Gampang",
@@ -131,6 +124,22 @@ export default async function RootLayout({
         <meta
           name="google-site-verification"
           content="1Bax7aPjj1-VAbhrzPseFaAfIXfasSZoY9RHTi9h-Is"
+        />
+
+        {/* Google Ads Global site tag */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17527429112"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17527429112');
+            `,
+          }}
         />
       </head>
       <body
