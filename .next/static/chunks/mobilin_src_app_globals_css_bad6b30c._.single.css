@@ -1584,6 +1584,11 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(22, 163, 74, var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -2451,6 +2456,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:bg-secondary\/80:hover {
   background-color: hsl(var(--secondary) / .8);
+}
+
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(21, 128, 61, var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-accent:hover {

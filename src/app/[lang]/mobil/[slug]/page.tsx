@@ -9,35 +9,29 @@ import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper
 import CarCard from "@/components/shared/car-card";
 
 type Props = {
-  params: Promise<{ slug: string; lang: Locale }>;
+  params: { slug: string; lang: Locale };
 };
 
 async function getCarData(slug: string): Promise<Car | undefined> {
   return cars.find((c) => c.name.toLowerCase().replace(/ /g, "-") === slug);
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const car = await getCarData(params.slug);
 
-  if (!car) {
-    return {};
-  }
+  if (!car) return {};
 
   const dict = await getDictionary(params.lang);
 
-  const priceMatic = car.price.matic ? `Matic: ${car.price.matic}` : "";
-  const priceManual = car.price.manual ? `Manual: ${car.price.manual}` : "";
-
   return {
     title: `${dict.site.name} - ${car.name}`,
-    description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang. Harga ${priceManual} ${priceMatic}`,
+    description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}.`,
     alternates: {
       canonical: `/${params.lang}/mobil/${params.slug}`,
     },
     openGraph: {
       title: `Sewa Mobil ${car.name} - ${dict.site.name}`,
-      description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang.`,
+      description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}.`,
       url: `/${params.lang}/mobil/${params.slug}`,
       images: [
         {
@@ -51,43 +45,21 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   };
 }
 
-export default async function CarDetailPage(props: Props) {
-  const params = await props.params;
+export default async function CarDetailPage({ params }: Props) {
   const car = await getCarData(params.slug);
-  if (!car) {
-    notFound();
-  }
+  if (!car) notFound();
 
   const dictionary = await getDictionary(params.lang);
   const similarCars = cars
     .filter((c) => c.category === car.category && c.name !== car.name)
     .slice(0, 2);
 
-  const offers = [];
-  if (car.price.manual) {
-    offers.push({
-      "@type": "Offer",
-      priceCurrency: "IDR",
-      price: car.price.manual,
-      name: "Manual Transmission",
-      availability: "https://schema.org/InStock",
-    });
-  }
-  if (car.price.matic) {
-    offers.push({
-      "@type": "Offer",
-      priceCurrency: "IDR",
-      price: car.price.matic,
-      name: "Automatic Transmission",
-      availability: "https://schema.org/InStock",
-    });
-  }
-
+  // JSON-LD tanpa harga
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Car",
     name: car.name,
-    description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}. Tersedia transmisi manual dan otomatis.`,
+    description: `Sewa mobil ${car.name} di Mobilin. Kapasitas ${car.capacity} penumpang, tahun ${car.year}.`,
     image: car.image,
     brand: {
       "@type": "Brand",
@@ -96,7 +68,10 @@ export default async function CarDetailPage(props: Props) {
     vehicleModelDate: car.year,
     seatingCapacity: car.capacity.toString(),
     fuelType: car.fuel,
-    offers: offers,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+    },
   };
 
   return (

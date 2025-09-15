@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "59ae2ed853063b7972e9938a2571173e",
-    "previewModeSigningKey": "8755765c3287637343c9e0615b08b8706e991e62d3b38fdcf91df16c6d648985",
-    "previewModeEncryptionKey": "820a09af5957e2f5bb8c70e23d33fb620308bc08cadd4c097a92f2499b14b1bb"
-  }
-}
+{"version":4,"routes":{"/id":{},"/en":{},"/id/daftar-mobil":{},"/en/daftar-mobil":{}},"dynamicRoutes":{"/[lang]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[lang]/daftar-mobil":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/daftar-mobil","routeRegex":"^\\/([^/]+?)\\/daftar\\-mobil(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"f53a90436222ef5b196755578575a121","previewModeSigningKey":"7a4e259a5f608cd4c31fbd9621d4a4966f7baaf1ef840b0f8ca6e1e3170873f4","previewModeEncryptionKey":"2b78e0a67b1faa8f1afce618a295f8ae538fb322448a0aa54ff84be629a9a9c4"}}

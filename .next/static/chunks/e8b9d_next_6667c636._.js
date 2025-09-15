@@ -3797,11 +3797,18 @@ const configEnv = ("TURBOPACK compile-time value", {
     "remotePatterns": ("TURBOPACK compile-time value", [
         ("TURBOPACK compile-time value", {
             "protocol": ("TURBOPACK compile-time value", "https"),
-            "hostname": ("TURBOPACK compile-time value", "placehold.co")
+            "hostname": ("TURBOPACK compile-time value", "placehold.co"),
+            "pathname": ("TURBOPACK compile-time value", "/**")
         }),
         ("TURBOPACK compile-time value", {
             "protocol": ("TURBOPACK compile-time value", "https"),
-            "hostname": ("TURBOPACK compile-time value", "images.unsplash.com")
+            "hostname": ("TURBOPACK compile-time value", "picsum.photos"),
+            "pathname": ("TURBOPACK compile-time value", "/**")
+        }),
+        ("TURBOPACK compile-time value", {
+            "protocol": ("TURBOPACK compile-time value", "https"),
+            "hostname": ("TURBOPACK compile-time value", "images.unsplash.com"),
+            "pathname": ("TURBOPACK compile-time value", "/**")
         })
     ])
 });
@@ -4151,11 +4158,18 @@ function getImageProps(imgProps) {
             "remotePatterns": ("TURBOPACK compile-time value", [
                 ("TURBOPACK compile-time value", {
                     "protocol": ("TURBOPACK compile-time value", "https"),
-                    "hostname": ("TURBOPACK compile-time value", "placehold.co")
+                    "hostname": ("TURBOPACK compile-time value", "placehold.co"),
+                    "pathname": ("TURBOPACK compile-time value", "/**")
                 }),
                 ("TURBOPACK compile-time value", {
                     "protocol": ("TURBOPACK compile-time value", "https"),
-                    "hostname": ("TURBOPACK compile-time value", "images.unsplash.com")
+                    "hostname": ("TURBOPACK compile-time value", "picsum.photos"),
+                    "pathname": ("TURBOPACK compile-time value", "/**")
+                }),
+                ("TURBOPACK compile-time value", {
+                    "protocol": ("TURBOPACK compile-time value", "https"),
+                    "hostname": ("TURBOPACK compile-time value", "images.unsplash.com"),
+                    "pathname": ("TURBOPACK compile-time value", "/**")
                 })
             ])
         })
