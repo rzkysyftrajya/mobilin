@@ -6,7 +6,7 @@ type AppRouteHandlerRoutes = "/sitemap.xml"
 type PageRoutes = never
 type LayoutRoutes = "/" | "/[lang]"
 type RedirectRoutes = never
-type RewriteRoutes = never
+type RewriteRoutes = "/google6ba3894116871aad.html" | "/site.webmanifest"
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes | AppRouteHandlerRoutes
 
 
@@ -30,6 +30,8 @@ interface ParamMap {
   "/[lang]/syarat-ketentuan": { "lang": string; }
   "/[lang]/tentang-kami": { "lang": string; }
   "/[lang]/testimonial": { "lang": string; }
+  "/google6ba3894116871aad.html": {}
+  "/site.webmanifest": {}
   "/sitemap.xml": {}
 }
 

@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/id":{},"/en":{},"/id/blog":{},"/en/blog":{},"/id/kontak":{},"/en/kontak":{},"/id/layanan":{},"/en/layanan":{},"/id/destinasi":{},"/en/destinasi":{}},"dynamicRoutes":{"/[lang]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[lang]/blog":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/blog","routeRegex":"^\\/([^/]+?)\\/blog(?:\\/)?$","allowHeader":[]},"/[lang]/kontak":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/kontak","routeRegex":"^\\/([^/]+?)\\/kontak(?:\\/)?$","allowHeader":[]},"/[lang]/layanan":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/layanan","routeRegex":"^\\/([^/]+?)\\/layanan(?:\\/)?$","allowHeader":[]},"/[lang]/destinasi":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/destinasi","routeRegex":"^\\/([^/]+?)\\/destinasi(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"adf59016bae7955dd1eb4ce903a2cc50","previewModeSigningKey":"cc2d72316ae6cefdc3aa4bc858ac6f18f106dcb93c4adb38d3d3d75ea40ff1a3","previewModeEncryptionKey":"98286bdfbfc1fd6ac5072a7724406311e805854f9a4164dd91f389e90fee922c"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "59ae2ed853063b7972e9938a2571173e",
+    "previewModeSigningKey": "8755765c3287637343c9e0615b08b8706e991e62d3b38fdcf91df16c6d648985",
+    "previewModeEncryptionKey": "820a09af5957e2f5bb8c70e23d33fb620308bc08cadd4c097a92f2499b14b1bb"
+  }
+}

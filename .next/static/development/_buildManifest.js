@@ -1,6 +1,15 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
-    "afterFiles": [],
+    "afterFiles": [
+      {
+        "source": "/google6ba3894116871aad.html",
+        "destination": "/google6ba3894116871aad.html"
+      },
+      {
+        "source": "/site.webmanifest",
+        "destination": "/site.webmanifest"
+      }
+    ],
     "beforeFiles": [],
     "fallback": []
   },

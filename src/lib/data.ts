@@ -7,11 +7,10 @@ import type {
   DestinationArea,
 } from "@/lib/types";
 
-export const cars = [
+export const cars: Car[] = [
   {
     id: 1,
     name: "Toyota Avanza",
-    price: { manual: 350000, matic: 400000 },
     capacity: 7,
     year: 2022,
     fuel: "Bensin",
@@ -22,7 +21,6 @@ export const cars = [
   {
     id: 2,
     name: "Toyota Agya",
-    price: { manual: 300000, matic: 350000 },
     capacity: 5,
     year: 2021,
     fuel: "Bensin",
@@ -33,7 +31,6 @@ export const cars = [
   {
     id: 3,
     name: "Daihatsu Ayla",
-    price: { manual: 280000, matic: 320000 },
     capacity: 5,
     year: 2020,
     fuel: "Bensin",
@@ -44,7 +41,6 @@ export const cars = [
   {
     id: 4,
     name: "Honda Brio",
-    price: { manual: 320000, matic: 370000 },
     capacity: 5,
     year: 2021,
     fuel: "Bensin",
@@ -55,7 +51,6 @@ export const cars = [
   {
     id: 5,
     name: "Toyota Calya",
-    price: { manual: 330000, matic: 380000 },
     capacity: 7,
     year: 2020,
     fuel: "Bensin",
@@ -66,7 +61,6 @@ export const cars = [
   {
     id: 6,
     name: "Suzuki Ertiga",
-    price: { manual: 400000, matic: 450000 },
     capacity: 7,
     year: 2022,
     fuel: "Bensin",
@@ -77,7 +71,6 @@ export const cars = [
   {
     id: 7,
     name: "Suzuki XL7",
-    price: { manual: 420000, matic: 470000 },
     capacity: 7,
     year: 2022,
     fuel: "Bensin",
@@ -88,7 +81,6 @@ export const cars = [
   {
     id: 8,
     name: "Mitsubishi Xpander",
-    price: { manual: 450000, matic: 500000 },
     capacity: 7,
     year: 2023,
     fuel: "Bensin",
@@ -99,7 +91,6 @@ export const cars = [
   {
     id: 9,
     name: "Toyota Rush",
-    price: { manual: 500000, matic: 550000 },
     capacity: 7,
     year: 2021,
     fuel: "Bensin",
@@ -110,7 +101,6 @@ export const cars = [
   {
     id: 10,
     name: "Daihatsu Terios",
-    price: { manual: 480000, matic: 530000 },
     capacity: 7,
     year: 2021,
     fuel: "Bensin",
@@ -121,7 +111,6 @@ export const cars = [
   {
     id: 11,
     name: "Toyota Fortuner",
-    price: { manual: 750000, matic: 800000 },
     capacity: 7,
     year: 2022,
     fuel: "Diesel",
@@ -132,7 +121,6 @@ export const cars = [
   {
     id: 12,
     name: "Mitsubishi Pajero",
-    price: { manual: 800000, matic: 850000 },
     capacity: 7,
     year: 2022,
     fuel: "Diesel",
@@ -143,7 +131,6 @@ export const cars = [
   {
     id: 13,
     name: "Toyota Alphard",
-    price: { manual: 2000000, matic: 2200000 },
     capacity: 7,
     year: 2022,
     fuel: "Bensin",
@@ -154,7 +141,6 @@ export const cars = [
   {
     id: 14,
     name: "Toyota Innova Reborn",
-    price: { manual: 500000, matic: 550000 },
     capacity: 7,
     year: 2021,
     fuel: "Diesel",
@@ -165,7 +151,6 @@ export const cars = [
   {
     id: 15,
     name: "Toyota Innova Zenix",
-    price: { manual: 600000, matic: 650000 },
     capacity: 7,
     year: 2023,
     fuel: "Hybrid",
@@ -176,7 +161,6 @@ export const cars = [
   {
     id: 16,
     name: "Isuzu Elf Minibus",
-    price: { manual: 900000, matic: 0 },
     capacity: 15,
     year: 2020,
     fuel: "Diesel",
@@ -187,7 +171,6 @@ export const cars = [
   {
     id: 17,
     name: "Hiace Commuter",
-    price: { manual: 1000000, matic: 0 },
     capacity: 15,
     year: 2021,
     fuel: "Diesel",
@@ -198,7 +181,6 @@ export const cars = [
   {
     id: 18,
     name: "Hiace Premio",
-    price: { manual: 1200000, matic: 0 },
     capacity: 15,
     year: 2022,
     fuel: "Diesel",
@@ -209,7 +191,6 @@ export const cars = [
   {
     id: 19,
     name: "Hiace Premio Luxury",
-    price: { manual: 1500000, matic: 0 },
     capacity: 12,
     year: 2022,
     fuel: "Diesel",
@@ -220,7 +201,6 @@ export const cars = [
   {
     id: 20,
     name: "Hilux Double Cabin",
-    price: { manual: 1300000, matic: 0 },
     capacity: 5,
     year: 2022,
     fuel: "Diesel",

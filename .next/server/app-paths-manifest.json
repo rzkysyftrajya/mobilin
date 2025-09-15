@@ -1,9 +1,1 @@
-{
-  "/[lang]/blog/[slug]/page": "app/[lang]/blog/[slug]/page.js",
-  "/[lang]/blog/page": "app/[lang]/blog/page.js",
-  "/[lang]/destinasi/page": "app/[lang]/destinasi/page.js",
-  "/[lang]/kontak/page": "app/[lang]/kontak/page.js",
-  "/[lang]/layanan/page": "app/[lang]/layanan/page.js",
-  "/[lang]/page": "app/[lang]/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
-}
+{}

@@ -1,23 +1,15 @@
-
-export type CarPrice = {
-  manual?: number;
-  matic?: number;
-};
+// src/lib/types.ts
 
 export interface Car {
+  id: number;
   name: string;
-  price: CarPrice;
   capacity: number;
   year: number;
-  fuel: 'Bensin' | 'Diesel';
+  fuel: "Bensin" | "Diesel" | "Hybrid";
   image: string;
-  'data-ai-hint': string;
-  category: 'City Car' | 'MPV' | 'SUV' | 'Mewah' | 'Niaga';
+  specs: string[];
+  "data-ai-hint"?: string;
   gallery?: string[];
-  specs: {
-    engine: string;
-    horsepower: string;
-  };
 }
 
 export interface Testimonial {
@@ -25,7 +17,7 @@ export interface Testimonial {
   review: string;
   rating: number;
   avatar: string;
-  'data-ai-hint': string;
+  "data-ai-hint"?: string;
 }
 
 export interface Faq {
@@ -34,29 +26,29 @@ export interface Faq {
 }
 
 export interface BlogPost {
-    slug: string;
-    title: string;
-    date: string;
-    excerpt: string;
-    author: string;
-    image: string;
-    'data-ai-hint': string;
-    content: string;
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  author: string;
+  image: string;
+  content: string;
+  "data-ai-hint"?: string;
 }
 
 export interface Destination {
-    name: string;
-    image: string;
-    'data-ai-hint': string;
-    description: string;
+  name: string;
+  image: string;
+  description: string;
+  "data-ai-hint"?: string;
 }
 
 export interface DestinationArea {
-    slug: string;
-    province: string;
-    name: string;
-    heroImage: string;
-    'data-ai-hint': string;
-    short_description: string;
-    destinations: Destination[];
+  slug: string;
+  province: string;
+  name: string;
+  heroImage: string;
+  short_description: string;
+  destinations: Destination[];
+  "data-ai-hint"?: string;
 }
