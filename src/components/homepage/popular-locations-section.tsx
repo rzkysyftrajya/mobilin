@@ -18,6 +18,13 @@ export default function PopularLocationsSection({ dict, lang }: { dict: any, lan
           </p>
         </div>
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-4 max-w-5xl mx-auto">
+            <Link 
+                href={`/rental-mobil-jakarta`} 
+                className="text-muted-foreground hover:text-primary hover:underline flex items-center gap-1.5 transition-colors"
+            >
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span>Jakarta</span>
+            </Link>
             {popularCities.map(city => (
                 <Link 
                     key={city.slug} 

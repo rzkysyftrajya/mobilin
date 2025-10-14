@@ -12,7 +12,7 @@ export const cars: Car[] = [
     id: 1,
     name: "Toyota Avanza",
     capacity: 7,
-    year: 2022,
+    year: 2024,
     fuel: "Bensin",
     image: "/daftar-mobil/all-new-avanza.png",
     specs: ["AC Dingin", "Audio", "Kapasitas 7 orang"],
