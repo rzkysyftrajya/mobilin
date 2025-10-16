@@ -1,4 +1,4 @@
-limport type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ScrollAnimationWrapper from "@/components/shared/scroll-animation-wrapper";
