@@ -125,6 +125,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/[lang]">
 }
 
+// Validate ../../src/app/[lang]/rental-mobil-batam/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/[lang]/rental-mobil-batam/page.js")
+  handler satisfies AppPageConfig<"/[lang]/rental-mobil-batam">
+}
+
 // Validate ../../src/app/[lang]/rental-mobil-jakarta/page.tsx
 {
   const handler = {} as typeof import("../../src/app/[lang]/rental-mobil-jakarta/page.js")

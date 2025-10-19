@@ -315,6 +315,7 @@ export default async function JakartaAdsPage() {
 
       {/* Hero Section - Highly Optimized */}
       <ScrollAnimationWrapper>
+<<<<<<< HEAD
         <div className="relative bg-gradient-to-br from-primary/10 via-background to-accent/10 py-12 md:py-20 overflow-hidden">
           {/* Animated Background */}
           <div className="absolute inset-0 opacity-30">
@@ -521,13 +522,55 @@ export default async function JakartaAdsPage() {
                     <Shield className="w-5 h-5 text-blue-500" />
                     <span className="font-semibold">Aman & Terpercaya</span>
                   </div>
+=======
+        <div className="relative bg-gradient-to-br from-primary/10 via-background to-accent/10 py-10 md:py-16">
+          <div className="container">
+            <div className="mb-3">
+              <Breadcrumb items={breadcrumbItems} lang="id" />
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Left Column - Main CTA */}
+              <div>
+                <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  ⭐ Rating 4.9/5 dari 2000+ Pelanggan
+                </div>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold !font-headline text-foreground mb-4 leading-tight">
+                  Rental Mobil Jakarta
+                  <span className="text-primary block mt-2">
+                    Mulai 300rb/Hari
+                  </span>
+                </h1>
+
+                <p className="text-xl md:text-2xl text-muted-foreground mb-6 leading-relaxed">
+                  Sopir Profesional • Mobil Terawat • Booking Instant 24 Jam
+                </p>
+
+                {/* Quick Benefits */}
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {heroBenefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="bg-primary/10 p-2 rounded-lg">
+                        <benefit.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-sm font-medium">
+                        {benefit.text}
+                      </span>
+                    </div>
+                  ))}
+>>>>>>> fix batam
                 </div>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                   <Button
                     size="lg"
+<<<<<<< HEAD
                     className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white h-16 text-lg font-bold shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 animate-pulse-slow"
+=======
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground h-14 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
+>>>>>>> fix batam
                     asChild
                   >
                     <a
@@ -544,7 +587,11 @@ export default async function JakartaAdsPage() {
                   <Button
                     size="lg"
                     variant="outline"
+<<<<<<< HEAD
                     className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground h-16 text-lg font-bold hover:scale-105 transition-all duration-300"
+=======
+                    className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground h-14 text-lg font-bold"
+>>>>>>> fix batam
                     asChild
                   >
                     <a href="tel:+6281342222747">
@@ -554,6 +601,7 @@ export default async function JakartaAdsPage() {
                   </Button>
                 </div>
 
+<<<<<<< HEAD
                 {/* Trust Line */}
                 <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
@@ -635,6 +683,60 @@ export default async function JakartaAdsPage() {
                   <div className="text-center p-6 bg-background/80 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                     <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Clock className="w-7 h-7 text-purple-600 dark:text-purple-400" />
+=======
+                <p className="text-sm text-muted-foreground">
+                  ✓ Respon dalam 5 menit • ✓ Tanpa deposit • ✓ Proses mudah &
+                  cepat
+                </p>
+              </div>
+
+              {/* Right Column - Trust Signals */}
+              <div className="hidden lg:block">
+                <Card className="bg-background/80 backdrop-blur border-2 border-primary/20 shadow-2xl">
+                  <CardContent className="p-8">
+                    <div className="space-y-6">
+                      <div className="text-center pb-6 border-b">
+                        <div className="text-4xl font-bold text-primary mb-2">
+                          2000+
+                        </div>
+                        <div className="text-muted-foreground">
+                          Pelanggan Puas
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                          <div className="text-3xl font-bold text-primary mb-1">
+                            50+
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            Unit Mobil
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold text-primary mb-1">
+                            24/7
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            Siap Melayani
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-accent/10 p-4 rounded-lg">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                          <span className="font-bold">Rating 4.9/5</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground italic">
+                          "Sopir ramah, mobil bersih, harga terjangkau.
+                          Recommended banget!"
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-2">
+                          - Budi S., Jakarta
+                        </p>
+                      </div>
+>>>>>>> fix batam
                     </div>
                     <p className="font-bold mb-2">Jam Operasional</p>
                     <p className="text-primary font-semibold">24/7</p>
@@ -753,11 +855,17 @@ export default async function JakartaAdsPage() {
         <ScrollAnimationWrapper>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-5xl font-bold !font-headline mb-4">
                 Pilihan Mobil &{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   Harga Terbaik
                 </span>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold !font-headline mb-4">
+                Kenapa Harus Pilih{" "}
+                <span className="text-primary">Mobilin Jakarta?</span>
+>>>>>>> fix batam
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Berbagai pilihan armada terawat dengan harga transparan. Sudah termasuk sopir!
@@ -768,12 +876,50 @@ export default async function JakartaAdsPage() {
               {popularCars.map((car, index) => (
                 <Card
                   key={index}
+<<<<<<< HEAD
                   className="group bg-background/80 backdrop-blur-sm border-2 border-primary/20 shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:border-primary/40 transition-all duration-500 overflow-hidden hover:-translate-y-3"
+=======
+                  className="bg-background dark:bg-neutral-900 border-none shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <CardContent className="p-6">
+                    <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                      <item.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </ScrollAnimationWrapper>
+
+        {/* Popular Cars with Pricing */}
+        <ScrollAnimationWrapper>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold !font-headline mb-4">
+                Pilihan Mobil &{" "}
+                <span className="text-primary">Harga Terbaik</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Berbagai pilihan armada untuk kebutuhan Anda dengan harga
+                transparan
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {popularCars.map((car, index) => (
+                <Card
+                  key={index}
+                  className="bg-background dark:bg-neutral-900 border-2 border-primary/20 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all overflow-hidden group"
+>>>>>>> fix batam
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={car.image}
                       alt={car.name}
+<<<<<<< HEAD
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -824,15 +970,32 @@ export default async function JakartaAdsPage() {
                           Hemat {parseInt(car.oldPrice.replace(/\D/g, '')) - parseInt(car.price.split(' ')[1].replace(/\D/g, ''))}rb!
                         </span>
                       </div>
+=======
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-5">
+                    <h3 className="font-bold text-xl mb-1">{car.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-3 flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {car.capacity}
+                    </p>
+                    <div className="bg-accent/10 text-accent px-3 py-2 rounded-lg font-bold text-lg mb-4 text-center">
+                      {car.price}
+>>>>>>> fix batam
                     </div>
 
                     {/* Features */}
                     <ul className="space-y-2 mb-4">
                       {car.features.map((feature, i) => (
+<<<<<<< HEAD
                         <li
                           key={i}
                           className="flex items-center gap-2 text-sm group-hover:text-foreground transition-colors duration-300"
                         >
+=======
+                        <li key={i} className="flex items-center gap-2 text-sm">
+>>>>>>> fix batam
                           <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -841,7 +1004,11 @@ export default async function JakartaAdsPage() {
 
                     {/* CTA Button */}
                     <Button
+<<<<<<< HEAD
                       className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white hover:scale-105 transition-all duration-300 shadow-lg"
+=======
+                      className="w-full bg-primary hover:bg-primary/90"
+>>>>>>> fix batam
                       asChild
                     >
                       <a
@@ -909,6 +1076,7 @@ export default async function JakartaAdsPage() {
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Hanya 4 langkah sederhana, mobil siap digunakan
               </p>
+<<<<<<< HEAD
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -957,6 +1125,12 @@ export default async function JakartaAdsPage() {
                   <MessageCircle className="mr-2 w-6 h-6" />
                   Mulai Booking Sekarang
                 </a>
+=======
+              <Button size="lg" variant="outline" asChild>
+                <Link href={`/id/daftar-mobil`}>
+                  Lihat Semua Armada <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+>>>>>>> fix batam
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
                 ⚡ Proses cepat • ✅ Tanpa ribet • 💯 Terpercaya
@@ -968,6 +1142,7 @@ export default async function JakartaAdsPage() {
         {/* Why Choose Us */}
         <ScrollAnimationWrapper>
           <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold !font-headline mb-4">
                 Kenapa Harus Pilih{" "}
@@ -1007,13 +1182,14 @@ export default async function JakartaAdsPage() {
         <ScrollAnimationWrapper>
           <div className="max-w-6xl mx-auto">
             <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+=======
+            <Card className="bg-primary/5 border-2 border-primary/20">
+>>>>>>> fix batam
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold !font-headline mb-3">
                     Jangkauan Layanan di{" "}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                      Jakarta & Sekitarnya
-                    </span>
+                    <span className="text-primary">Jakarta & Sekitarnya</span>
                   </h2>
                   <p className="text-muted-foreground">
                     Kami melayani rental mobil di seluruh area Jakarta dan sekitarnya
@@ -1023,6 +1199,7 @@ export default async function JakartaAdsPage() {
                   {serviceAreas.map((area, index) => (
                     <div
                       key={index}
+<<<<<<< HEAD
                       className="group relative flex items-center gap-2 bg-background/80 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-lg border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
                     >
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 group-hover:animate-bounce" />
@@ -1034,6 +1211,12 @@ export default async function JakartaAdsPage() {
                           ⭐
                         </span>
                       )}
+=======
+                      className="flex items-center gap-2 bg-background p-3 rounded-lg shadow-sm"
+                    >
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="font-medium text-sm">{area}</span>
+>>>>>>> fix batam
                     </div>
                   ))}
                 </div>
@@ -1125,11 +1308,16 @@ export default async function JakartaAdsPage() {
         <ScrollAnimationWrapper>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-5xl font-bold !font-headline mb-4">
                 Apa Kata{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   Pelanggan Kami?
                 </span>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold !font-headline mb-4">
+                Apa Kata <span className="text-primary">Pelanggan Kami?</span>
+>>>>>>> fix batam
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Ribuan pelanggan puas telah mempercayai layanan rental mobil kami sejak 2015
@@ -1159,6 +1347,7 @@ export default async function JakartaAdsPage() {
               {testimonials.slice(0, 6).map((testimonial, index) => (
                 <Card
                   key={index}
+<<<<<<< HEAD
                   className="group bg-background/80 backdrop-blur-sm dark:bg-neutral-900 border-2 border-primary/10 hover:border-primary/30 shadow-md hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2"
                 >
                   <CardContent className="p-6">
@@ -1177,14 +1366,27 @@ export default async function JakartaAdsPage() {
                         </svg>
                         Verified
                       </div>
+=======
+                  className="bg-background dark:bg-neutral-900 border-none shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+>>>>>>> fix batam
                     </div>
-                    <p className="text-muted-foreground mb-4 italic line-clamp-4 group-hover:text-foreground transition-colors duration-300">
+                    <p className="text-muted-foreground mb-4 italic line-clamp-4">
                       "{testimonial.review}"
                     </p>
                     <div className="flex items-center gap-3 pt-4 border-t border-primary/10">
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
+<<<<<<< HEAD
                         className="w-12 h-12 rounded-full object-cover border-2 border-primary/20 group-hover:border-primary/40 group-hover:scale-110 transition-all duration-300"
                       />
                       <div>
@@ -1195,6 +1397,11 @@ export default async function JakartaAdsPage() {
                           Pelanggan Setia
                         </span>
                       </div>
+=======
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <span className="font-semibold">{testimonial.name}</span>
+>>>>>>> fix batam
                     </div>
                   </CardContent>
                 </Card>
@@ -1228,9 +1435,7 @@ export default async function JakartaAdsPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold !font-headline mb-4">
                 Pertanyaan yang Sering{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Ditanyakan
-                </span>
+                <span className="text-primary">Ditanyakan</span>
               </h2>
               <p className="text-lg text-muted-foreground">
                 Temukan jawaban atas pertanyaan umum seputar rental mobil Jakarta
@@ -1240,23 +1445,36 @@ export default async function JakartaAdsPage() {
               {staticFaqs.slice(0, 10).map((faq, index) => (
                 <Card
                   key={index}
+<<<<<<< HEAD
                   className="group bg-background/80 backdrop-blur-sm dark:bg-neutral-900 border-2 border-primary/10 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <CardContent className="p-6">
                     <h3 className="font-bold text-lg text-primary mb-3 flex items-start gap-3 group-hover:text-accent transition-colors duration-300">
                       <span className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 text-sm border border-primary/20 group-hover:scale-110 transition-transform duration-300 font-bold">
+=======
+                  className="bg-background dark:bg-neutral-900 border-none shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-lg text-primary mb-3 flex items-start gap-2">
+                      <span className="bg-primary/10 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm mt-0.5">
+>>>>>>> fix batam
                         {index + 1}
                       </span>
                       {faq.question}
                     </h3>
+<<<<<<< HEAD
                     <p className="text-muted-foreground ml-11 group-hover:text-foreground transition-colors duration-300">
                       {faq.answer}
                     </p>
+=======
+                    <p className="text-muted-foreground ml-8">{faq.answer}</p>
+>>>>>>> fix batam
                   </CardContent>
                 </Card>
               ))}
             </div>
 
+<<<<<<< HEAD
             <div className="text-center mt-10">
               <p className="text-muted-foreground mb-4">
                 Masih ada pertanyaan lain?
@@ -1313,6 +1531,80 @@ export default async function JakartaAdsPage() {
                       💬 Chat WhatsApp - Respon 5 Menit
                     </a>
                   </Button>
+=======
+        {/* Final CTA Section */}
+        <ScrollAnimationWrapper>
+          <Card className="max-w-5xl mx-auto bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground shadow-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+            <CardContent className="p-10 md:p-16 text-center relative z-10">
+              <div className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-full font-bold mb-6 text-lg animate-pulse">
+                🔥 PROMO TERBATAS HARI INI!
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-extrabold !font-headline mb-4">
+                Siap Rental Mobil di Jakarta?
+              </h2>
+              <p className="text-xl md:text-2xl mb-3 opacity-95">
+                Dapatkan Diskon hingga 15% untuk Booking Hari Ini!
+              </p>
+              <p className="text-lg mb-8 opacity-90">
+                Proses cepat, harga transparan, sopir profesional • Tersedia 24
+                jam
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground h-16 text-xl font-bold shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto px-10"
+                  asChild
+                >
+                  <a
+                    href={`https://wa.me/6281342222747?text=${encodeURIComponent(
+                      bookingText
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="mr-3 w-7 h-7" />
+                    Pesan Sekarang via WA
+                  </a>
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white/80 text-white hover:bg-white hover:text-primary h-16 text-xl font-bold w-full sm:w-auto px-10"
+                  asChild
+                >
+                  <a href="tel:+6281342222747">
+                    <Phone className="mr-3 w-7 h-7" />
+                    0813-4222-2747
+                  </a>
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <div className="bg-white/10 backdrop-blur p-4 rounded-lg">
+                  <Clock className="w-8 h-8 mx-auto mb-2" />
+                  <p className="font-bold">Layanan 24 Jam</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur p-4 rounded-lg">
+                  <Zap className="w-8 h-8 mx-auto mb-2" />
+                  <p className="font-bold">Booking Instant</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur p-4 rounded-lg">
+                  <BadgeCheck className="w-8 h-8 mx-auto mb-2" />
+                  <p className="font-bold">Terpercaya & Aman</p>
+                </div>
+              </div>
+
+              <p className="mt-8 opacity-75 text-sm">
+                Sudah melayani 2000+ pelanggan puas di Jakarta • Rating 4.9/5
+              </p>
+            </CardContent>
+          </Card>
+        </ScrollAnimationWrapper>
+>>>>>>> fix batam
 
                   <div className="flex gap-3">
                     <Button
