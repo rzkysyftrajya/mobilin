@@ -49,6 +49,7 @@ import { motion } from "framer-motion";
 import CarCarousel from "@/components/shared/car-carousel";
 import InteractiveMap from "@/components/shared/interactive-map";
 import BookingModal from "@/components/shared/booking-modal";
+import CountdownTimer from "@/components/shared/countdown-timer";
 import { cars } from "@/lib/data";
 import { useEffect } from "react";
 
@@ -82,7 +83,7 @@ const batamWhyChooseUs = [
 const destinations = [
   {
     name: "Pantai Nongsa",
-    image: "/destinasi/batam/nongsa-beach.png",
+    image: "/batam/pantai-nongsa.png",
     description: "Pantai eksotis dengan resort mewah dan aktivitas water sport",
     icon: Waves,
     category: "Wisata Alam",
@@ -91,7 +92,7 @@ const destinations = [
   },
   {
     name: "Batam Center",
-    image: "/destinasi/batam/batam-center.png",
+    image: "/batam/batam-centre.png",
     description: "Pusat perbelanjaan modern dan kuliner internasional",
     icon: ShoppingBag,
     category: "Belanja & Kuliner",
@@ -100,39 +101,42 @@ const destinations = [
   },
   {
     name: "Masjid Agung Batam",
-    image: "/destinasi/batam/masjid-agung.png",
-    description: "Arsitektur megah dengan pemandangan kota yang indah",
-    icon: Building,
-    category: "Religi & Budaya",
+    image: "/batam/masjid-agung-batam.png",
+    description:
+      "Masjid megah dengan arsitektur modern yang menjadi ikon Batam",
+    icon: Heart,
+    category: "Wisata Religi",
     duration: "1-2 jam",
     distance: "15 km dari pusat kota",
   },
   {
     name: "Barelang Bridge",
-    image: "/destinasi/batam/barelang.png",
-    description: "Ikon Batam dengan pemandangan laut yang memukau",
-    icon: Mountain,
-    category: "Landmark",
+    image: "/batam/barelang-bridge.png",
+    description:
+      "Jembatan terpanjang di Asia Tenggara yang menghubungkan Batam dan Barelang",
+    icon: Route,
+    category: "Wisata Infrastruktur",
     duration: "2-3 jam",
-    distance: "30 km dari pusat kota",
+    distance: "20 km dari pusat kota",
   },
   {
-    name: "Nagoya Hill Shopping Mall",
-    image: "/destinasi/batam/nagoya-hill.png",
-    description: "Pusat belanja terlengkap dengan produk internasional",
-    icon: ShoppingBag,
-    category: "Belanja",
-    duration: "3-5 jam",
-    distance: "Nagoya",
+    name: "Nagoya Hill",
+    image: "/batam/nagoya-hill.png",
+    description: "Tempat nongkrong dengan pemandangan kota dan kuliner Jepang",
+    icon: Coffee,
+    category: "Kuliner & Lifestyle",
+    duration: "3-4 jam",
+    distance: "12 km dari pusat kota",
   },
   {
     name: "Maha Vihara Duta Maitreya",
-    image: "/destinasi/batam/maha-vihara.png",
-    description: "Kuil Buddha terbesar di Asia Tenggara",
-    icon: Palmtree,
-    category: "Religi & Budaya",
-    duration: "1-2 jam",
-    distance: "20 km dari pusat kota",
+    image: "/batam/maha-vihara.png",
+    description:
+      "Patung Buddha terbesar di Asia Tenggara dengan kompleks wisata spiritual",
+    icon: Heart,
+    category: "Wisata Religi",
+    duration: "2-3 jam",
+    distance: "18 km dari pusat kota",
   },
 ];
 
@@ -216,7 +220,7 @@ const blogPosts = [
     title: "10 Destinasi Wisata Terbaik di Batam yang Wajib Dikunjungi 2025",
     excerpt:
       "Panduan lengkap tempat wisata populer di Batam, dari pantai hingga kuliner khas.",
-    image: "/blog/batam-destinations.jpg",
+    image: "/blog/blog1.png",
     link: "/blog/destinasi-wisata-batam-2025",
     category: "Travel Guide",
     readTime: "8 min",
@@ -225,7 +229,7 @@ const blogPosts = [
     title: "Tips Sewa Mobil di Batam: Panduan Lengkap untuk Pemula",
     excerpt:
       "Semua yang perlu Anda ketahui sebelum menyewa mobil di Batam untuk liburan atau bisnis.",
-    image: "/blog/car-rental-tips.jpg",
+    image: "/blog/blog2.png",
     link: "/blog/tips-sewa-mobil-batam",
     category: "Car Rental Tips",
     readTime: "6 min",
@@ -234,7 +238,7 @@ const blogPosts = [
     title: "Kuliner Khas Batam: 15 Makanan yang Harus Anda Coba",
     excerpt:
       "Jelajahi kuliner Batam dari seafood segar hingga makanan khas Melayu yang lezat.",
-    image: "/blog/batam-culinary.jpg",
+    image: "/blog/blog1.png",
     link: "/blog/kuliner-batam",
     category: "Food & Beverage",
     readTime: "10 min",
@@ -243,7 +247,7 @@ const blogPosts = [
     title: "Perjalanan Bisnis ke Batam: Panduan Efisiensi & Produktivitas",
     excerpt:
       "Tips dan trik untuk memaksimalkan perjalanan bisnis Anda di Batam.",
-    image: "/blog/business-travel.jpg",
+    image: "/blog/blog2.png",
     link: "/blog/business-travel-batam",
     category: "Business Travel",
     readTime: "7 min",
@@ -326,16 +330,6 @@ const batamFaqs = [
 ];
 
 export default function BatamPage() {
-  // Preload critical image
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = "image";
-    link.href = "/destinasi/batam/batam.png";
-    link.fetchpriority = "high";
-    document.head.appendChild(link);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Optimized Hero Section - Reduced Initial Load */}
@@ -355,12 +349,12 @@ export default function BatamPage() {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/destinasi/batam/batam.png"
+            src="/batam/hero-section.png"
             alt="Sewa Mobil di Batam - Rental Mobil Premium"
             fill
             className="object-cover"
             priority
-            quality={75}
+            quality={90}
             sizes="100vw"
             fetchPriority="high"
           />
@@ -378,18 +372,13 @@ export default function BatamPage() {
             <span>Rental Mobil Premium Batam</span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight max-w-5xl mx-auto"
-          >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight max-w-5xl mx-auto">
             Sewa Mobil <span className="text-blue-400">Premium di Batam</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-200">
               Untuk Bisnis & Liburan
             </span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}

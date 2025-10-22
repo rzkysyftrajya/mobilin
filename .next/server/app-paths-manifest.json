@@ -1,6 +1,4 @@
 {
-  "/[lang]/page": "app/[lang]/page.js",
   "/[lang]/rental-mobil-batam/page": "app/[lang]/rental-mobil-batam/page.js",
-  "/[lang]/rental-mobil-jakarta/page": "app/[lang]/rental-mobil-jakarta/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }
