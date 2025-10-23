@@ -3,8 +3,8 @@
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/[lang]/sitemap.xml/route": "app/[lang]/sitemap.xml/route.js",
   "/robots.txt/route": "app/robots.txt/route.js",
-  "/[lang]/blog/page": "app/[lang]/blog/page.js",
   "/[lang]/blog/[slug]/page": "app/[lang]/blog/[slug]/page.js",
+  "/[lang]/blog/page": "app/[lang]/blog/page.js",
   "/[lang]/daftar-mobil/page": "app/[lang]/daftar-mobil/page.js",
   "/[lang]/destinasi/[slug]/page": "app/[lang]/destinasi/[slug]/page.js",
   "/[lang]/destinasi/page": "app/[lang]/destinasi/page.js",
@@ -21,6 +21,6 @@
   "/[lang]/tentang-kami/page": "app/[lang]/tentang-kami/page.js",
   "/[lang]/testimonial/page": "app/[lang]/testimonial/page.js",
   "/[lang]/kebijakan-privasi/page": "app/[lang]/kebijakan-privasi/page.js",
-  "/[lang]/layanan/[slug]/page": "app/[lang]/layanan/[slug]/page.js",
-  "/[lang]/syarat-ketentuan/page": "app/[lang]/syarat-ketentuan/page.js"
+  "/[lang]/syarat-ketentuan/page": "app/[lang]/syarat-ketentuan/page.js",
+  "/[lang]/layanan/[slug]/page": "app/[lang]/layanan/[slug]/page.js"
 }

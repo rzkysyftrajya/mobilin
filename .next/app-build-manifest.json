@@ -54,6 +54,16 @@
       "static/chunks/917-0dd8955c9dfb21fc.js",
       "static/chunks/app/[lang]/layout-88f783396220c3a0.js"
     ],
+    "/[lang]/blog/[slug]/page": [
+      "static/chunks/webpack-e80d46364e55656c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-e3bf15caf1f1e0f9.js",
+      "static/chunks/main-app-b0b81f1f1c2096de.js",
+      "static/chunks/909-19c637db16e29cad.js",
+      "static/chunks/205-87338f700df5dcd3.js",
+      "static/chunks/356-c5e20c4b262af940.js",
+      "static/chunks/app/[lang]/blog/[slug]/page-2380f9a80de5377f.js"
+    ],
     "/[lang]/blog/page": [
       "static/chunks/webpack-e80d46364e55656c.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
@@ -64,16 +74,6 @@
       "static/chunks/619-ba102abea3e3d0e4.js",
       "static/chunks/356-c5e20c4b262af940.js",
       "static/chunks/app/[lang]/blog/page-6ba338b73a491f85.js"
-    ],
-    "/[lang]/blog/[slug]/page": [
-      "static/chunks/webpack-e80d46364e55656c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-e3bf15caf1f1e0f9.js",
-      "static/chunks/main-app-b0b81f1f1c2096de.js",
-      "static/chunks/909-19c637db16e29cad.js",
-      "static/chunks/205-87338f700df5dcd3.js",
-      "static/chunks/356-c5e20c4b262af940.js",
-      "static/chunks/app/[lang]/blog/[slug]/page-2380f9a80de5377f.js"
     ],
     "/[lang]/daftar-mobil/page": [
       "static/chunks/webpack-e80d46364e55656c.js",
@@ -254,6 +254,15 @@
       "static/chunks/619-ba102abea3e3d0e4.js",
       "static/chunks/app/[lang]/kebijakan-privasi/page-5189e5a5749179bf.js"
     ],
+    "/[lang]/syarat-ketentuan/page": [
+      "static/chunks/webpack-e80d46364e55656c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-e3bf15caf1f1e0f9.js",
+      "static/chunks/main-app-b0b81f1f1c2096de.js",
+      "static/chunks/909-19c637db16e29cad.js",
+      "static/chunks/205-87338f700df5dcd3.js",
+      "static/chunks/app/[lang]/syarat-ketentuan/page-222396720a5ece06.js"
+    ],
     "/[lang]/layanan/[slug]/page": [
       "static/chunks/webpack-e80d46364e55656c.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
@@ -264,15 +273,6 @@
       "static/chunks/619-ba102abea3e3d0e4.js",
       "static/chunks/356-c5e20c4b262af940.js",
       "static/chunks/app/[lang]/layanan/[slug]/page-6ba338b73a491f85.js"
-    ],
-    "/[lang]/syarat-ketentuan/page": [
-      "static/chunks/webpack-e80d46364e55656c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-e3bf15caf1f1e0f9.js",
-      "static/chunks/main-app-b0b81f1f1c2096de.js",
-      "static/chunks/909-19c637db16e29cad.js",
-      "static/chunks/205-87338f700df5dcd3.js",
-      "static/chunks/app/[lang]/syarat-ketentuan/page-222396720a5ece06.js"
     ]
   }
 }
