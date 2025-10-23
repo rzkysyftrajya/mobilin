@@ -1,1 +1,246 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[{"source":"/google6ba3894116871aad.html","destination":"/google6ba3894116871aad.html","regex":"^\\/google6ba3894116871aad\\.html(?:\\/)?$","check":true},{"source":"/site.webmanifest","destination":"/site.webmanifest","regex":"^\\/site\\.webmanifest(?:\\/)?$","check":true}],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [
+      {
+        "source": "/google6ba3894116871aad.html",
+        "destination": "/google6ba3894116871aad.html",
+        "regex": "^/google6ba3894116871aad\\.html(?:/)?$"
+      },
+      {
+        "source": "/site.webmanifest",
+        "destination": "/site.webmanifest",
+        "regex": "^/site\\.webmanifest(?:/)?$"
+      }
+    ],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/[lang]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/blog",
+      "regex": "^/([^/]+?)/blog(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/blog(?:/)?$"
+    },
+    {
+      "page": "/[lang]/blog/[slug]",
+      "regex": "^/([^/]+?)/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/daftar-mobil",
+      "regex": "^/([^/]+?)/daftar\\-mobil(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/daftar\\-mobil(?:/)?$"
+    },
+    {
+      "page": "/[lang]/destinasi",
+      "regex": "^/([^/]+?)/destinasi(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/destinasi(?:/)?$"
+    },
+    {
+      "page": "/[lang]/destinasi/[slug]",
+      "regex": "^/([^/]+?)/destinasi/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/destinasi/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/faq",
+      "regex": "^/([^/]+?)/faq(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/faq(?:/)?$"
+    },
+    {
+      "page": "/[lang]/karier",
+      "regex": "^/([^/]+?)/karier(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/karier(?:/)?$"
+    },
+    {
+      "page": "/[lang]/kebijakan-privasi",
+      "regex": "^/([^/]+?)/kebijakan\\-privasi(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/kebijakan\\-privasi(?:/)?$"
+    },
+    {
+      "page": "/[lang]/kontak",
+      "regex": "^/([^/]+?)/kontak(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/kontak(?:/)?$"
+    },
+    {
+      "page": "/[lang]/layanan",
+      "regex": "^/([^/]+?)/layanan(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/layanan(?:/)?$"
+    },
+    {
+      "page": "/[lang]/layanan/[slug]",
+      "regex": "^/([^/]+?)/layanan/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/layanan/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/mobil/[slug]",
+      "regex": "^/([^/]+?)/mobil/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/mobil/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/rental-mobil/[province]",
+      "regex": "^/([^/]+?)/rental\\-mobil/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPprovince": "nxtPprovince"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/rental\\-mobil/(?<nxtPprovince>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/rental-mobil/[province]/[city]",
+      "regex": "^/([^/]+?)/rental\\-mobil/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPprovince": "nxtPprovince",
+        "nxtPcity": "nxtPcity"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/rental\\-mobil/(?<nxtPprovince>[^/]+?)/(?<nxtPcity>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/rental-mobil-batam",
+      "regex": "^/([^/]+?)/rental\\-mobil\\-batam(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/rental\\-mobil\\-batam(?:/)?$"
+    },
+    {
+      "page": "/[lang]/rental-mobil-jakarta",
+      "regex": "^/([^/]+?)/rental\\-mobil\\-jakarta(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/rental\\-mobil\\-jakarta(?:/)?$"
+    },
+    {
+      "page": "/[lang]/sitemap.xml",
+      "regex": "^/([^/]+?)/sitemap\\.xml(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/[lang]/syarat-ketentuan",
+      "regex": "^/([^/]+?)/syarat\\-ketentuan(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/syarat\\-ketentuan(?:/)?$"
+    },
+    {
+      "page": "/[lang]/tentang-kami",
+      "regex": "^/([^/]+?)/tentang\\-kami(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/tentang\\-kami(?:/)?$"
+    },
+    {
+      "page": "/[lang]/testimonial",
+      "regex": "^/([^/]+?)/testimonial(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/testimonial(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
