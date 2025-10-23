@@ -1,4 +1,5 @@
 {
+  "/[lang]/page": "app/[lang]/page.js",
   "/[lang]/rental-mobil-batam/page": "app/[lang]/rental-mobil-batam/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }
