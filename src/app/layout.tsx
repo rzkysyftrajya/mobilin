@@ -119,6 +119,20 @@ export default async function RootLayout({
       <head>
         {/* Preconnect untuk gambar */}
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+
+        {/* Preload critical resources */}
+        <link rel="preload" href="/favicon.ico" as="image" />
+        <link rel="preload" href="/logo.png" as="image" />
+
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
         {/* Google site verification */}
         <meta
@@ -126,7 +140,7 @@ export default async function RootLayout({
           content="1Bax7aPjj1-VAbhrzPseFaAfIXfasSZoY9RHTi9h-Is"
         />
 
-        {/* Google Ads Global site tag */}
+        {/* Google Ads Global site tag - Defer loading */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17527429112"

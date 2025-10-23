@@ -47,7 +47,7 @@ import { Breadcrumb } from "@/components/shared/breadcrumb";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CarCarousel from "@/components/shared/car-carousel";
-import InteractiveMap from "@/components/shared/interactive-map";
+
 import BookingModal from "@/components/shared/booking-modal";
 import CountdownTimer from "@/components/shared/countdown-timer";
 import { cars } from "@/lib/data";
@@ -215,67 +215,28 @@ const travelPackages = [
   },
 ];
 
-const blogPosts = [
-  {
-    title: "10 Destinasi Wisata Terbaik di Batam yang Wajib Dikunjungi 2025",
-    excerpt:
-      "Panduan lengkap tempat wisata populer di Batam, dari pantai hingga kuliner khas.",
-    image: "/blog/blog1.png",
-    link: "/blog/destinasi-wisata-batam-2025",
-    category: "Travel Guide",
-    readTime: "8 min",
-  },
-  {
-    title: "Tips Sewa Mobil di Batam: Panduan Lengkap untuk Pemula",
-    excerpt:
-      "Semua yang perlu Anda ketahui sebelum menyewa mobil di Batam untuk liburan atau bisnis.",
-    image: "/blog/blog2.png",
-    link: "/blog/tips-sewa-mobil-batam",
-    category: "Car Rental Tips",
-    readTime: "6 min",
-  },
-  {
-    title: "Kuliner Khas Batam: 15 Makanan yang Harus Anda Coba",
-    excerpt:
-      "Jelajahi kuliner Batam dari seafood segar hingga makanan khas Melayu yang lezat.",
-    image: "/blog/blog1.png",
-    link: "/blog/kuliner-batam",
-    category: "Food & Beverage",
-    readTime: "10 min",
-  },
-  {
-    title: "Perjalanan Bisnis ke Batam: Panduan Efisiensi & Produktivitas",
-    excerpt:
-      "Tips dan trik untuk memaksimalkan perjalanan bisnis Anda di Batam.",
-    image: "/blog/blog2.png",
-    link: "/blog/business-travel-batam",
-    category: "Business Travel",
-    readTime: "7 min",
-  },
-];
-
 const externalLinks = [
   {
     title: "Batam Tourism Official",
-    url: "https://visitbatam.id",
+    url: "https://visitbatam.com/",
     description: "Informasi resmi pariwisata Batam",
     icon: Globe,
   },
   {
     title: "Bandara Hang Nadim",
-    url: "https://hangnadim-airport.co.id",
+    url: "https://www.bthairport.com/",
     description: "Jadwal penerbangan & informasi bandara",
     icon: Plane,
   },
   {
     title: "Ferry Batam - Singapore",
-    url: "https://batamfast.com",
+    url: "https://www.batamfast.com/home/index.ashx",
     description: "Jadwal & booking ferry ke Singapura",
     icon: Ship,
   },
   {
     title: "Batam Free Trade Zone",
-    url: "https://batamftz.go.id",
+    url: "https://bpbatam.go.id/batam-free-trade-zone/",
     description: "Informasi kawasan perdagangan bebas",
     icon: Factory,
   },
@@ -333,17 +294,6 @@ export default function BatamPage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Optimized Hero Section - Reduced Initial Load */}
-      <div className="pt-20">
-        <div className="container mx-auto px-4">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Rental Mobil Batam", href: "/rental-mobil-batam" },
-            ]}
-            lang="id"
-          />
-        </div>
-      </div>
 
       {/* Hero Section - LCP Optimized with Fallback */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
@@ -414,7 +364,7 @@ export default function BatamPage() {
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg font-bold"
             >
-              <Link href="https://wa.me/6281342222747?text=Halo,%20saya%20tertarik%20untuk%20sewa%20mobil%20di%20Batam.">
+              <Link href="https://wa.me/6285177262716?text=Halo,%20saya%20tertarik%20untuk%20sewa%20mobil%20di%20Batam.">
                 <MessageCircle className="w-6 h-6 mr-2" />
                 WhatsApp Kami
               </Link>
@@ -429,7 +379,7 @@ export default function BatamPage() {
           >
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-green-400" />
-              <span className="text-base font-semibold">0813-4222-2747</span>
+              <span className="text-base font-semibold">0851-7726-2716</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-blue-400" />
@@ -534,68 +484,6 @@ export default function BatamPage() {
         </div>
       </section>
 
-      {/* Travel Packages */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <ScrollAnimationWrapper>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Paket Perjalanan Batam
-              </h2>
-              <p className="text-lg text-gray-600">
-                Pilih paket yang sesuai dengan kebutuhan perjalanan Anda
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {travelPackages.map((pkg, index) => (
-                <Card
-                  key={index}
-                  className={`relative ${
-                    pkg.popular ? "border-2 border-blue-500" : ""
-                  }`}
-                >
-                  {pkg.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-                      Paling Populer
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="text-xl">{pkg.name}</CardTitle>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-blue-600">
-                        {pkg.price}
-                      </span>
-                      <span className="text-gray-500">/ {pkg.duration}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                        <Car className="w-4 h-4" />
-                        <span>{pkg.car}</span>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="font-semibold text-sm mb-2">Termasuk:</p>
-                      {pkg.includes.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">
-                      Pesan Paket Ini
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </ScrollAnimationWrapper>
-        </div>
-      </section>
-
       {/* Comprehensive Destinations */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -651,74 +539,6 @@ export default function BatamPage() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </ScrollAnimationWrapper>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <ScrollAnimationWrapper>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Panduan & Tips Perjalanan
-              </h2>
-              <p className="text-lg text-gray-600">
-                Baca artikel terbaru tentang wisata dan rental mobil di Batam
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {blogPosts.map((post, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-lg transition-all"
-                >
-                  <div className="relative h-40 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 25vw"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-xs font-bold">
-                      {post.category}
-                    </div>
-                  </div>
-                  <CardContent className="p-5">
-                    <h3 className="font-bold mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">
-                        {post.readTime} read
-                      </span>
-                      <Link
-                        href={post.link}
-                        className="text-blue-600 text-sm font-semibold hover:underline inline-flex items-center gap-1"
-                      >
-                        Baca Selengkapnya
-                        <ChevronRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Button asChild variant="outline" size="lg">
-                <Link href="/blog">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Lihat Semua Artikel
-                </Link>
-              </Button>
             </div>
           </ScrollAnimationWrapper>
         </div>
@@ -786,25 +606,6 @@ export default function BatamPage() {
                 </div>
               </div>
             </div>
-          </ScrollAnimationWrapper>
-        </div>
-      </section>
-
-      {/* Interactive Map */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <ScrollAnimationWrapper>
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Lokasi Layanan di Batam
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Kami hadir di berbagai titik strategis di Batam untuk memudahkan
-                kebutuhan transportasi Anda
-              </p>
-            </div>
-
-            <InteractiveMap locations={[]} />
           </ScrollAnimationWrapper>
         </div>
       </section>
@@ -1112,7 +913,7 @@ export default function BatamPage() {
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-10 py-6 text-lg font-bold"
               >
-                <Link href="https://wa.me/6281342222747?text=Halo,%20saya%20tertarik%20untuk%20sewa%20mobil%20di%20Batam.">
+                <Link href="https://wa.me/6285177262716?text=Halo,%20saya%20tertarik%20untuk%20sewa%20mobil%20di%20Batam.">
                   <MessageCircle className="w-6 h-6 mr-2" />
                   WhatsApp Kami
                 </Link>
